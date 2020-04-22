@@ -21,6 +21,11 @@ tshark -Y 'http' -r HTTP_traffic.pcap
 # address 52.32.74.91?
 tshark -r HTTP_traffic.pcap -Y 'ip.src==192.168.252.128 && ip.dst==52.32.74.91'
 ```
+## WiFi Filters
+```sh
+# Command to display WPA handshake packets?
+tshark -r WiFi_traffic.pcap -Y 'eapol'
+```
 
 # Statistics
 
