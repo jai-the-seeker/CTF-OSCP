@@ -26,6 +26,7 @@ hydra -L <wordlist> -P<password list> <IP> http-post-form "<file path>:username=
 5. Basic words
 
 # WiFi
+## WEP
 ```sh
 # -b <bssid> : target selection: access point's MAC
 aircrack-ng -b 00:21:91:d2:8e:25 WEP-Cracking.cap
