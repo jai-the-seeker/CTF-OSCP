@@ -1,4 +1,25 @@
 # Scripts
+# Basic Commands
+Refs :
+* <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
+>
+## Read from user prompt
+```bash
+#!/bin/bash
+
+read -p "Enter your Name : " NAME
+echo "Your name is $NAME"
+```
+output
+```sh
+$ ./testscript.sh 
+Enter your Name : tester
+Your name is tester
+```
+
+
+# Useful Scripts
+## Authorization Token
 Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization
 ```bash
 #!/bin/bash
