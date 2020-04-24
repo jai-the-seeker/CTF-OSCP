@@ -17,6 +17,28 @@ Enter your Name : tester
 Your name is tester
 ```
 
+## If-else
+```bash
+#!/bin/bash
+
+echo "Enter your username : "
+read NAME
+
+if [ "$NAME" = "Eliot" ];
+then
+  echo "Welcome back Eliot"
+else
+  echo "Please register"
+fi
+```
+output
+```sh
+$ ./testscript.sh 
+Enter your username : 
+Eliot
+Welcome back Eliot
+```
+
 
 # Useful Scripts
 ## Authorization Token
