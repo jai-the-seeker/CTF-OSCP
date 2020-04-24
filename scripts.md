@@ -3,7 +3,7 @@
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
 >
-## Read from user prompt
+## Read input from user prompt
 ```bash
 #!/bin/bash
 
