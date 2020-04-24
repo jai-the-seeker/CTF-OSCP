@@ -24,7 +24,51 @@ Enter your username :
 Eliot
 Welcome back Eliot
 ```
+## Conditional Expressions
+We can make use of conditional expressions in the bash scripting. In order to know the available expressions use
+```sh
+$ help test
+test: test [expr]
+    Evaluate conditional expression.
+    
+    Exits with a status of 0 (true) or 1 (false) depending on
+    the evaluation of EXPR.
+    
+    -d FILE        True if file is a directory.
+    -e FILE        True if file exists.
+```
+### Use of conditional expression in if-else
+```bash
+#!/bin/bash
+  
+if [ -e /etc/shadow ];
+then
+  echo "File exists"
+else
+  echo "Missing..."
+fi
+```
+## for loops
+```bash
+#!/bin/bash
 
+for NAME in $(cat names.txt); do
+  echo "Name is : $NAME"
+done
+```
+output
+```sh
+$ ./testscript.sh 
+Name is : ram
+Name is : shayam
+Name is : sita
+```
+
+```bash
+```
+output
+```sh
+```
 
 # Useful Scripts
 ## Authorization Token
