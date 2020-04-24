@@ -53,7 +53,7 @@ curl -H 'Authorization: Token <token>' 192.183.171.3
 We have to write a custom wrapper around this command. In the script, we will rely on the fact
 that on using the correct token, we will get something else than "Unauthorized Access".
 
-You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#run-shell-programs-by-reading-commandline-arguments>
+You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#authorization-token>
 
 After performing the dictionary attack we will get the password, which can be used to set the token in the headers
 ```sh
