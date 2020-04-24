@@ -1,4 +1,5 @@
 ## Run shell programs by reading commandline arguments
+This script reads different tokens from a file and pass them to curl command to find out the valid token for authorization
 ```python
 import subprocess
 import argparse
