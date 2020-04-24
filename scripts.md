@@ -3,20 +3,6 @@
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
 >
-## Read input from user prompt
-```bash
-#!/bin/bash
-
-read -p "Enter your Name : " NAME
-echo "Your name is $NAME"
-```
-output
-```sh
-$ ./testscript.sh 
-Enter your Name : tester
-Your name is tester
-```
-
 ## If-else
 ```bash
 #!/bin/bash
