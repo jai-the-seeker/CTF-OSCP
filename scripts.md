@@ -88,7 +88,24 @@ rtt min/avg/max/mdev = 0.079/0.079/0.079/0.000 ms
 PING 192.234.246.2 (192.234.246.2) 56(84) bytes of data.
 64 bytes from 192.234.246.2: icmp_seq=1 ttl=64 time=0.022 ms
 ```
+## Read file line by line
+Refs:
+* <https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/>
 
+`while read -r line; do COMMAND; done < input.file`
+
+The `-r` option passed to read command prevents backslash escapes from being interpreted.
+Add `IFS=` option before read command to prevent leading/trailing whitespace from being trimmed.
+
+`while IFS= read -r line; do COMMAND_on $line; done < input.file`
+```bash
+#!/bin/bash
+input="/path/to/txt/file"
+while IFS= read -r line
+do
+  echo "$line"
+done < "$input"
+```
 # Useful Scripts
 ## Authorization Token
 Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization
