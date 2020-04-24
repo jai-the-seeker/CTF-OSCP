@@ -65,9 +65,28 @@ Name is : sita
 ```
 
 ```bash
+#!/bin/bash
+
+echo "Please enter the subnet : "
+read SUBNET
+
+for IP in $(seq 1 254); do
+  ping -c 1 $SUBNET.$IP
+done
 ```
 output
 ```sh
+$ ./testscript.sh
+Please enter the subnet : 
+192.234.246
+PING 192.234.246.1 (192.234.246.1) 56(84) bytes of data.
+64 bytes from 192.234.246.1: icmp_seq=1 ttl=64 time=0.079 ms
+
+--- 192.234.246.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.079/0.079/0.079/0.000 ms
+PING 192.234.246.2 (192.234.246.2) 56(84) bytes of data.
+64 bytes from 192.234.246.2: icmp_seq=1 ttl=64 time=0.022 ms
 ```
 
 # Useful Scripts
