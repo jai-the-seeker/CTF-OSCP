@@ -12,7 +12,7 @@ counter=8
 
 echo "Double vs Single quote"
 echo "$counter"
-# siingle quote prevents shell expansion to keep text as it is
+# single quote prevents shell expansion to keep text as it is
 echo '$counter' 
 
 echo "Variable Expansion"
