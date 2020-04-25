@@ -7,14 +7,23 @@ Refs :
 ```bash
 #!/bin/bash
 
-echo "Enter your username : "
-read NAME
+echo "Enter your username : "; read NAME
 
-if [ "$NAME" = "Eliot" ]
+# format 1
+# if test-result-is-true; then do something; fi
+if [ "$NAME" = "Eliot" ]; then echo "Welcome back Eliot"; else echo "Please register"; fi
+
+function test_func() {
+  return 0
+}
+
+# format 2
+# if function-return-zero; then do something; fi
+if test_func
 then
-  echo "Welcome back Eliot"
+  echo "Function returned zero"
 else
-  echo "Please register"
+  echo "Non zero return!!!"
 fi
 ```
 output
@@ -23,6 +32,7 @@ $ ./testscript.sh
 Enter your username : 
 Eliot
 Welcome back Eliot
+Function returned zero
 ```
 ## Conditional Expressions
 We can make use of conditional expressions in the bash scripting. In order to know the available expressions use
