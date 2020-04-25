@@ -19,7 +19,7 @@ echo "Variable Expansion"
 echo $counter
 echo ${counter}th floor
 
-echo "Brace expansion"
+echo "Brace Expansion"
 echo T{a,i,o}m
 
 echo "Arithematic Expansion"
@@ -40,7 +40,7 @@ $counter
 Variable Expansion
 8
 8th floor
-Brace expansion
+Brace Expansion
 Tam Tim Tom
 Arithematic Expansion
 6
