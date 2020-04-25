@@ -81,7 +81,7 @@ Eliot
 Welcome back Eliot
 Function returned zero
 ```
-## Conditional Expressions
+## `test` Expressions
 We can make use of conditional expressions in the bash scripting. In order to know the available expressions use
 ```sh
 $ help test
@@ -94,7 +94,7 @@ test: test [expr]
     -d FILE        True if file is a directory.
     -e FILE        True if file exists.
 ```
-### Use of conditional expression in if-else
+### Use of `test` expression in if-else
 ```bash
 #!/bin/bash
   
