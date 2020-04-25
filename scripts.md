@@ -3,6 +3,53 @@
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
 >
+## Basic Expressions
+```bash
+#!/bin/bash
+
+# No space is allowed before and after the assignment (i.e. the equal sign) in BASH
+counter=8
+
+echo "Double vs Single quote"
+echo "$counter"
+# siingle quote prevents shell expansion to keep text as it is
+echo '$counter' 
+
+echo "Variable Expansion"
+echo $counter
+echo ${counter}th floor
+
+echo "Brace expansion"
+echo T{a,i,o}m
+
+echo "Arithematic Expansion"
+echo $[3*2]
+echo $((3*2))
+echo $((counter++))
+echo $((counter--))
+
+echo "Parameter Expansion"
+opt=${1:-DEFAULT VALUE}
+echo $opt
+```
+output
+```sh
+Double vs Single quote
+8
+$counter
+Variable Expansion
+8
+8th floor
+Brace expansion
+Tam Tim Tom
+Arithematic Expansion
+6
+6
+8
+9
+Parameter Expansion
+DEFAULT VALUE
+```
 ## If-else
 ```bash
 #!/bin/bash
