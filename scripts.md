@@ -10,7 +10,7 @@ Refs :
 echo "Enter your username : "
 read NAME
 
-if [ "$NAME" = "Eliot" ];
+if [ "$NAME" = "Eliot" ]
 then
   echo "Welcome back Eliot"
 else
@@ -41,7 +41,7 @@ test: test [expr]
 ```bash
 #!/bin/bash
   
-if [ -e /etc/shadow ];
+if [ -e /etc/shadow ]
 then
   echo "File exists"
 else
