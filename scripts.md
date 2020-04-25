@@ -81,6 +81,34 @@ Eliot
 Welcome back Eliot
 Function returned zero
 ```
+
+## Basic select
+```bash
+#!/bin/bash
+
+menu="Pizza Burger FrenchFries Quit"
+
+select choice in $menu; do
+  [[ $choice == Quit ]] && {
+    echo bye
+    break
+  }
+  # REPLY is a BASH built-in variable for select construct
+  echo "You selected option $REPLY"
+done
+```
+output
+```sh
+$ ./testscript.sh 
+1) Pizza
+2) Burger
+3) FrenchFries
+4) Quit
+#? 3
+You selected option 3
+#? 4
+bye
+```
 ## `test` Expressions
 We can make use of conditional expressions in the bash scripting. In order to know the available expressions use
 ```sh
