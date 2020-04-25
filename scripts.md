@@ -1,8 +1,8 @@
 # Scripts
 # Basic Commands
 Refs :
-* <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT
->
+* <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT>
+* <https://www.youtube.com/watch?v=aNQCl_ByM20>
 ## Basic Expressions
 ```bash
 #!/bin/bash
