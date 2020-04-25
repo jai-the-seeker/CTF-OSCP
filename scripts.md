@@ -10,7 +10,7 @@ Refs :
 echo "Enter your username : "; read NAME
 
 # format 1
-# if test-result-is-true; then do something; fi
+# if test-result-is-true; then COMMAND; fi
 if [ "$NAME" = "Eliot" ]; then echo "Welcome back Eliot"; else echo "Please register"; fi
 
 function test_func() {
@@ -18,7 +18,7 @@ function test_func() {
 }
 
 # format 2
-# if function-return-zero; then do something; fi
+# if function-return-zero; then COMMAND; fi
 if test_func
 then
   echo "Function returned zero"
@@ -107,7 +107,7 @@ Refs:
 The `-r` option passed to read command prevents backslash escapes from being interpreted.
 Add `IFS=` option before read command to prevent leading/trailing whitespace from being trimmed.
 
-`while IFS= read -r line; do COMMAND_on $line; done < input.file`
+`while IFS= read -r line; do COMMAND $line; done < input.file`
 ```bash
 #!/bin/bash
 input="/path/to/txt/file"
