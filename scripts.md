@@ -1,4 +1,22 @@
-# Scripts
+# Bash
+# Useful Scripts
+## Authorization Token
+Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization. To read file line by line in a while loop you can refer [Read file line by line](#read-file-line-by-line)
+```bash
+#!/bin/bash
+while read token; do
+content=$(curl -s -H 'Authorization: Token '"$token" $1)
+if echo "$content" | grep -qi "unauth"; then
+continue
+else
+echo "Found token : $token"
+fi
+done <$2
+```
+output
+```sh
+./brute.sh 192.186.248.3 wordlists/100-common-passwords.txt
+```
 # Basic Commands
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT>
@@ -211,22 +229,5 @@ do
   echo "$line"
 done < "$input"
 ```
-# Useful Scripts
-## Authorization Token
-Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization. To read file line by line in a while loop you can refer [Read file line by line](#read-file-line-by-line)
-```bash
-#!/bin/bash
-while read token; do
-content=$(curl -s -H 'Authorization: Token '"$token" $1)
-if echo "$content" | grep -qi "unauth"; then
-continue
-else
-echo "Found token : $token"
-fi
-done <$2
-```
-output
-```sh
-./brute.sh 192.186.248.3 wordlists/100-common-passwords.txt
-```
+
 
