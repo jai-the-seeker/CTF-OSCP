@@ -1,4 +1,11 @@
 # Bash
+## Sed
+```bash
+# Format
+# sed 's/regexp/replace/g' filename.txt
+sed 's/,/ /g' filename.txt # replaces all comma with space
+sed 's/\//g' filename.txt # remove / 
+```
 # Useful Scripts
 ## Authorization Token
 Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization. To read file line by line in a `while` loop you can refer [Read file line by line](#read-file-line-by-line)
