@@ -53,7 +53,6 @@ DEFAULT VALUE
 ## If-else
 ```bash
 #!/bin/bash
-
 echo "Enter your username : "; read NAME
 
 # format 1
@@ -84,9 +83,7 @@ Function returned zero
 ## Menu select
 ```bash
 #!/bin/bash
-
 menu="Pizza Burger FrenchFries Quit"
-
 select choice in $menu; do
   [[ $choice == Quit ]] && {
     echo bye
@@ -123,18 +120,11 @@ test: test [expr]
 ### Use of `test` expression in if-else
 ```bash
 #!/bin/bash
-  
-if [ -e /etc/shadow ]
-then
-  echo "File exists"
-else
-  echo "Missing..."
-fi
+if [ -e /etc/shadow ]; then echo "File exists"; else echo "Missing..."; fi
 ```
 ## for loops
 ```bash
 #!/bin/bash
-
 for((i = 1, j = 10; i <= 3 && j <= 20; i++, j += 10)); do echo $i $j; done
 ```
 output
@@ -145,7 +135,6 @@ output
 ## for-in-loops
 ```bash
 #!/bin/bash
-
 for NAME in $(cat names.txt); do
   echo "Name is : $NAME"
 done
@@ -156,13 +145,10 @@ Name is : ram
 Name is : shayam
 Name is : sita
 ```
-
 ```bash
 #!/bin/bash
-
 echo "Please enter the subnet : "
 read SUBNET
-
 for IP in $(seq 1 254); do
   ping -c 1 $SUBNET.$IP
 done
@@ -173,24 +159,16 @@ Please enter the subnet :
 192.234.246
 PING 192.234.246.1 (192.234.246.1) 56(84) bytes of data.
 64 bytes from 192.234.246.1: icmp_seq=1 ttl=64 time=0.079 ms
-
---- 192.234.246.1 ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 0.079/0.079/0.079/0.000 ms
-PING 192.234.246.2 (192.234.246.2) 56(84) bytes of data.
-64 bytes from 192.234.246.2: icmp_seq=1 ttl=64 time=0.022 ms
 ```
 ## Functions
 ### Arguments
 ```bash
 #!/bin/bash
-
 function show_arguments() { #define a function
   echo $@    # all arguments
   echo $*    # all arguments
   echo $1 $2 # first and second arguments
 }
-
 show_arguments 1 "a b c" 3
 ```
 output
@@ -202,14 +180,11 @@ output
 ### Local Variables
 ```bash
 #!/bin/bash
-
 counter=4
-
 function check() { #define a function
   local counter=8
   echo $counter  
 }
-
 check
 echo $counter
 ```
