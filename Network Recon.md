@@ -34,6 +34,7 @@ use auxiliary/scanner/http/http_header
 ## wfuzz
 Refs
 * <https://wfuzz.readthedocs.io/en/latest/user/basicusage.html#fuzzing-paths-and-files>
+
 There are two db wordlists associated with `wfuzz` which can be obtained from
 * <https://code.google.com/p/fuzzdb/>
 * <https://github.com/danielmiessler/SecLists>
