@@ -82,7 +82,7 @@ Welcome back Eliot
 Function returned zero
 ```
 
-## Basic select
+## Menu select
 ```bash
 #!/bin/bash
 
@@ -134,6 +134,17 @@ else
 fi
 ```
 ## for loops
+```bash
+#!/bin/bash
+
+for((i = 1, j = 10; i <= 3 && j <= 20; i++, j += 10)); do echo $i $j; done
+```
+output
+```
+1 10
+2 20
+```
+## for-in-loops
 ```bash
 #!/bin/bash
 
