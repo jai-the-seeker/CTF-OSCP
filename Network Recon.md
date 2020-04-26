@@ -1,6 +1,6 @@
 * [Basic Scanning](#bash-scanning)
 * [Directory Listing](#directory-listing)
-* [Header Manipulations](#header-manipulations)
+* [Header Fuzzing and Manipulation](#headerfuzzing-and-manipulation)
 # Basic Scanning
 ```sh
 # version of the running services
@@ -23,7 +23,7 @@ dirb http://192.166.161.3 directory.txt
 We can use curl to check for all the directories listed in the wordlist. This can be done by a following wrapper bash script
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
 
-# Header Manipulations
+# Header Fuzzing and Manipulation
 ## Fetch Header
 ```sh
 # curl -I to fetch headers and read the protection type from those headers
