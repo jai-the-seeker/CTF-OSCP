@@ -211,6 +211,21 @@ output
 8
 4
 ```
+### Exit codes
+```bash
+#!/bin/bash
+function func() { #define a function
+  return $1  
+}
+func 5
+(($? != 0)) && { echo "Error M1"; } # Method 1
+if ! func 5; then echo "Error M2"; fi # Method 2
+```
+output
+```sh
+Error M1
+Error M2
+```
 ## Read file line by line
 Refs:
 * <https://www.cyberciti.biz/faq/unix-howto-read-line-by-line-from-file/>
