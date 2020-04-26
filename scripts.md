@@ -151,8 +151,7 @@ for NAME in $(cat names.txt); do
 done
 ```
 output
-```sh
-$ ./testscript.sh 
+```sh 
 Name is : ram
 Name is : shayam
 Name is : sita
@@ -170,7 +169,6 @@ done
 ```
 output
 ```sh
-$ ./testscript.sh
 Please enter the subnet : 
 192.234.246
 PING 192.234.246.1 (192.234.246.1) 56(84) bytes of data.
@@ -181,6 +179,44 @@ PING 192.234.246.1 (192.234.246.1) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.079/0.079/0.079/0.000 ms
 PING 192.234.246.2 (192.234.246.2) 56(84) bytes of data.
 64 bytes from 192.234.246.2: icmp_seq=1 ttl=64 time=0.022 ms
+```
+## Functions
+### Arguments
+```bash
+#!/bin/bash
+
+function show_arguments() { #define a function
+  echo $@    # all arguments
+  echo $*    # all arguments
+  echo $1 $2 # first and second arguments
+}
+
+show_arguments 1 "a b c" 3
+```
+output
+```sh
+1 a b c 3
+1 a b c 3
+1 a b c
+```
+### Local Variables
+```bash
+#!/bin/bash
+
+counter=4
+
+function check() { #define a function
+  local counter=8
+  echo $counter  
+}
+
+check
+echo $counter
+```
+output
+```sh
+8
+4
 ```
 ## Read file line by line
 Refs:
