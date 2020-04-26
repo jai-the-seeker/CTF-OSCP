@@ -75,7 +75,6 @@ fi
 ```
 output
 ```sh
-$ ./testscript.sh 
 Enter your username : 
 Eliot
 Welcome back Eliot
@@ -99,7 +98,6 @@ done
 ```
 output
 ```sh
-$ ./testscript.sh 
 1) Pizza
 2) Burger
 3) FrenchFries
