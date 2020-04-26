@@ -1,7 +1,7 @@
 # Bash
 # Useful Scripts
 ## Authorization Token
-Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization. To read file line by line in a while loop you can refer [Read file line by line](#read-file-line-by-line)
+Bash script to read different tokens from a file and pass them to `curl` command to find out the valid token for authorization. To read file line by line in a `while` loop you can refer [Read file line by line](#read-file-line-by-line)
 ```bash
 #!/bin/bash
 while read token; do
