@@ -29,6 +29,18 @@ output
 ```sh
 ./brute.sh 192.186.248.3 wordlists/100-common-passwords.txt
 ```
+## Directory Listing
+```bash
+#!/bin/bash
+while read dir_name; do
+echo "Trying directory: $dir_name"
+curl http://$1$dir_name
+done <$2
+```
+output
+```sh
+./testscript.sh 192.11.183.3 directory.txt
+```
 # Basic Commands
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT>
