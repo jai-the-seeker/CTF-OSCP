@@ -16,6 +16,8 @@ use auxiliary/scanner/http/brute_dirs
 # directory.txt). Without this change, dirb won’t work.
 dirb http://192.166.161.3 directory.txt
 ```
+### Using `curl` and bash script
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
 # Fetch Headers
 ```sh
 # curl -I to fetch headers and read the protection type from those headers
