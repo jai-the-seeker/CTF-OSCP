@@ -1,3 +1,6 @@
+1. [Basic Scanning](#bash-scanning)
+2. [Directory Listing](#directory-listing)
+3. [Fetch Headers](#fetch-headers)
 # Basic Scanning
 ```sh
 # version of the running services
@@ -17,6 +20,7 @@ use auxiliary/scanner/http/brute_dirs
 dirb http://192.166.161.3 directory.txt
 ```
 ### Using `curl` and bash script
+We can use curl to check for all the directories listed in the wordlist. This can be done by a following wrapper bash script
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
 # Fetch Headers
 ```sh
