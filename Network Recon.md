@@ -9,6 +9,12 @@ nmap -sV -sC 192.165.34.3
 ```sh
 # bruteforce on web server directories and list the names of directories found using msfconsole
 use auxiliary/scanner/http/brute_dirs
+
+# DIRB  IS  a  Web Content Scanner. It looks for existing (and/or hidden) Web Objects. It basically works by
+# launching a dictionary basesd attack against a web server and analizing the response.
+# Note: Please remember to remove the preceding ‘/’ from each of directory name entry (in the
+# directory.txt). Without this change, dirb won’t work.
+dirb http://192.166.161.3 directory.txt
 ```
 # Fetch Headers
 ```sh
