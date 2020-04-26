@@ -1,6 +1,6 @@
 * [Basic Scanning](#bash-scanning)
 * [Directory Listing](#directory-listing)
-* [Header Fuzzing and Manipulation](#headerfuzzing-and-manipulation)
+* [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
 # Basic Scanning
 ```sh
 # version of the running services
