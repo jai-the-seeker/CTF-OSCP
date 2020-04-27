@@ -43,13 +43,26 @@ set AUTH_URI /poc/
 exploit
 ```
 ### Hydra
+#### http-get
 ```sh
 hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
 ```
 `-l` LOGIN or `-L` FILE  login with LOGIN name, or load several logins from FILE
 
 `-p` PASS  or `-P` FILE  try password PASS, or load several passwords from FILE
+#### http-post-form
+Ref
+* <https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/>
+* <https://www.youtube.com/watch?v=fFnEdoCyVhk&list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw&index=63>
 
+syntax
+```sh
+hydra -L <USER> -P <Password> <IP Address> http-post-form "<Login Page>:<Request Body>:<Error Message>"
+```
+Example:
+```sh
+hydra -L usernames.txt -P passwords.txt 192.168.2.62 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
+```
 ## Token Authentication
 Hydra and metasploit `http_login` module doesn’t support token authentication.
 We have to set the token in headers for token auth to work.
