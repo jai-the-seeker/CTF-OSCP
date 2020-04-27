@@ -64,10 +64,17 @@ Command:
 wfuzz -c -w /usr/share/wordlists/custom/http-headers-fuzz.txt -w /usr/share/wordlists/custom/ip-192-168-4-0.txt --hs "Header Missing" --sc "200" -H "FUZZ:FUZ2Z" "http://10.10.10.167/admin.php"
 ```
 A quick breakdown of the above command:
+
 `-c` will output with colors, I like colors.
+
 `-w` specifies a wordlist.
+
 `--hs` will hide responses of the type following it. In this case "Header Missing".
+
 `--sc` will show response codes of the type following it. In this case 200.
+
 `-H` specifies header parameters.
+
 `"FUZZ:FUZ2Z"` These are the two header parameters we are fuzzing. FUZZ is for the first wordlist specified. FUZ2Z is for the second word list specified. So we have something like this in the header of our request: "Acces-Control-Allow-Origin:192.168.4.44"
+
 "http://10.10.10.167/admin.php" Lastly, the target URL.
