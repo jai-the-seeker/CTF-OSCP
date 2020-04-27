@@ -75,6 +75,6 @@ A quick breakdown of the above command:
 
 `-H` specifies header parameters.
 
-`FUZZ:FUZ2Z` These are the two header parameters we are fuzzing. FUZZ is for the first wordlist specified. FUZ2Z is for the second word list specified. So we have something like this in the header of our request: "Acces-Control-Allow-Origin:192.168.4.44"
+`FUZZ:FUZ2Z` These are the two header parameters we are fuzzing. `FUZZ` is for the first wordlist specified. `FUZ2Z` is for the second word list specified. So we have something like this in the header of our request: "Acces-Control-Allow-Origin:192.168.4.44"
 
 `http://10.10.10.167/admin.php` Lastly, the target URL.
