@@ -1,4 +1,4 @@
-* [Basic Scanning](#bash-scanning)
+* [Basic Scanning](#basic-scanning)
 * [Directory Listing](#directory-listing)
 * [Authentication](#authentication)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
@@ -30,7 +30,9 @@ We can use curl to check for all the directories listed in the wordlist. This ca
 
 # Authentication
 ## Basic Authentication
-metasploit `http_login` module
+### metasploit 
+
+`http_login` module
 ```sh
 use auxiliary/scanner/http/http_login
 set RHOSTS 192.165.34.3
@@ -40,6 +42,14 @@ set VERBOSE false
 set AUTH_URI /poc/
 exploit
 ```
+### Hydra
+```sh
+hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
+```
+`-l` LOGIN or `-L` FILE  login with LOGIN name, or load several logins from FILE
+
+`-p` PASS  or `-P` FILE  try password PASS, or load several passwords from FILE
+
 ## Token Authentication
 Hydra and metasploit `http_login` module doesn’t support token authentication.
 We have to set the token in headers for token auth to work.
