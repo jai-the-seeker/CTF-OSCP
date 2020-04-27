@@ -9,6 +9,9 @@
 # -sV: Probe open ports to determine service/version info
 # -sC: equivalent to --script=default
 nmap -sV -sC 192.165.34.3
+
+# curl -I to fetch headers and read the protection type from those headers
+curl -I http://192.165.34.3/dir
 ```
 # Directory Listing
 ```sh
