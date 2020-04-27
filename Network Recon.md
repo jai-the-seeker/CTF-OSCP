@@ -45,6 +45,7 @@ exploit
 ### Hydra
 #### http-get
 Options
+
 `-l` LOGIN or `-L` FILE  login with LOGIN name, or load several logins from FILE
 
 `-p` PASS  or `-P` FILE  try password PASS, or load several passwords from FILE
