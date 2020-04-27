@@ -56,7 +56,7 @@ curl -H "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6)
 ```
 ### Missing Header
 Refs:
-*<https://rootflag.io/hack-the-box-control/>
+* <https://rootflag.io/hack-the-box-control/>
 In case we see some message like `Access Denied : Header Missing`, it seems that it's expecting a certain header parameter. We can use `wfuzz` to try and determine what it might be looking for. So we can create a list of all the HTTP header responses from here. So we have some header types to fuzz now we just need our target. We were given a hint earlier that we had some files stored on a 192.168.4.28 address. We can generate a list of every IP in that scope and use that. This is what our total command will look like:
 Command:
 ```sh
