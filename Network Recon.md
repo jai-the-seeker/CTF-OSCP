@@ -55,7 +55,9 @@ Here response code of `200` indicates that the `user-agent-string` is valid. The
 curl -H "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" 192.8.221.3/secret
 ```
 ### Missing Header
-In case we see message something like `Access Denied : Header Missing` about missing header, it seems that it's expecting a certain header parameter. We can use `wfuzz` to try and determine what it might be looking for. So we can create a list of all the HTTP header responses from here. So we have some header types to fuzz now we just need our target. We were given a hint earlier that we had some files stored on a 192.168.4.28 address. We can generate a list of every IP in that scope and use that. This is what our total command will look like:
+Refs:
+*<https://rootflag.io/hack-the-box-control/>
+In case we see some message like `Access Denied : Header Missing`, it seems that it's expecting a certain header parameter. We can use `wfuzz` to try and determine what it might be looking for. So we can create a list of all the HTTP header responses from here. So we have some header types to fuzz now we just need our target. We were given a hint earlier that we had some files stored on a 192.168.4.28 address. We can generate a list of every IP in that scope and use that. This is what our total command will look like:
 Command:
 ```sh
 wfuzz -c -w /usr/share/wordlists/custom/http-headers-fuzz.txt -w /usr/share/wordlists/custom/ip-192-168-4-0.txt --hs "Header Missing" --sc "200" -H "FUZZ:FUZ2Z" "http://10.10.10.167/admin.php"
