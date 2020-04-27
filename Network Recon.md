@@ -32,13 +32,13 @@ curl -I http://192.165.34.3/dir
 use auxiliary/scanner/http/http_header
 ```
 ## wfuzz
-Refs
+Official Website
 * <https://wfuzz.readthedocs.io/en/latest/user/basicusage.html#fuzzing-paths-and-files>
 
 There are two db wordlists associated with `wfuzz` which can be obtained from
 * <https://code.google.com/p/fuzzdb/>
 * <https://github.com/danielmiessler/SecLists>
-
+### User Agent String
 We can use `wfuzz` to check for various valid strings of the `User-Agent` by passing it a wordlist containing possible user agents strings.
 The word list can of user-agents can be obtained from <https://github.com/fuzzdb-project/fuzzdb/blob/master/discovery/UserAgent/UserAgentListCommon.txt>
 ```sh
@@ -54,3 +54,17 @@ Here response code of `200` indicates that the `user-agent-string` is valid. The
 ```sh
 curl -H "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" 192.8.221.3/secret
 ```
+### Missing Header
+In case we see message something like `Access Denied : Header Missing` about missing header, it seems that it's expecting a certain header parameter. We can use `wfuzz` to try and determine what it might be looking for. So we can create a list of all the HTTP header responses from here. So we have some header types to fuzz now we just need our target. We were given a hint earlier that we had some files stored on a 192.168.4.28 address. We can generate a list of every IP in that scope and use that. This is what our total command will look like:
+Command:
+```sh
+wfuzz -c -w /usr/share/wordlists/custom/http-headers-fuzz.txt -w /usr/share/wordlists/custom/ip-192-168-4-0.txt --hs "Header Missing" --sc "200" -H "FUZZ:FUZ2Z" "http://10.10.10.167/admin.php"
+```
+A quick breakdown of the above command:
+`-c` will output with colors, I like colors.
+`-w` specifies a wordlist.
+`--hs` will hide responses of the type following it. In this case "Header Missing".
+`--sc` will show response codes of the type following it. In this case 200.
+`-H` specifies header parameters.
+`"FUZZ:FUZ2Z"` These are the two header parameters we are fuzzing. FUZZ is for the first wordlist specified. FUZ2Z is for the second word list specified. So we have something like this in the header of our request: "Acces-Control-Allow-Origin:192.168.4.44"
+"http://10.10.10.167/admin.php" Lastly, the target URL.
