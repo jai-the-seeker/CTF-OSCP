@@ -4,6 +4,9 @@
 * [Useful Scripts](#Useful-Scripts)
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
+* [System Commands]
+  * [`netstat`](#`netstat`)
+## `netstat`
 # Bash
 ## Sed
 ```bash
@@ -48,7 +51,7 @@ output
 ./testscript.sh 192.11.183.3 directory.txt
 ```
 # System Commands
-## 'netstat'
+## `netstat`
 Refs:
 * <https://www.binarytides.com/linux-netstat-command-examples/>
 
