@@ -2,7 +2,8 @@
   * [Sed](#sed)
   * [`find`](#find)
 * [Useful Scripts](#Useful-Scripts)
-* [Authorization Token](#Authorization-Token)
+  * [Authorization Token](#Authorization-Token)
+  * [Directory Listing](#Directory-Listing)
 # Bash
 ## Sed
 ```bash
@@ -45,6 +46,31 @@ done <$2
 output
 ```sh
 ./testscript.sh 192.11.183.3 directory.txt
+```
+# System Commands
+## 'netstat'
+Refs:
+* <https://www.binarytides.com/linux-netstat-command-examples/>
+
+Netstat is a command line utility that can be used to list out all the network (socket) connections on a system.
+```sh
+# List out all connections
+netstat -a
+# List out only tcp connections
+netstat -at
+# Disable reverse dns lookup for faster output. By default, the netstat command tries to find out the hostname of each ip address in the # connection by doing a reverse dns lookup. This slows down the output.
+netstat -n
+# List out only listening connections
+netstat -l
+# Get process name/pid and user id. -p for process name/pid and -e for user
+# When using the -p option, netstat must be run with root privileges, otherwise it cannot detect the pids of processes running with root # privileges and most services like http and ftp often run with root privileges.
+sudo netstat -ltpe
+# All established connections from the server.
+netstat -natu | grep 'ESTABLISHED'
+netstat -natu | grep 'ESTABLISHED' | grep 61.177.142.158
+# Listening Connection
+netstat -an | grep 'LISTEN'
+netstat -tnl
 ```
 # Basic Commands
 Refs :
