@@ -55,7 +55,7 @@ output
 Refs:
 * <https://www.binarytides.com/linux-netstat-command-examples/>
 
-Netstat is a command line utility that can be used to list out all the network (socket) connections on a system.
+`netstat` is a command line utility that can be used to list out all the network (socket) connections on a system.
 ```sh
 # List out all connections
 netstat -a
