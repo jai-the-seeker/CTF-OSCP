@@ -57,6 +57,11 @@ Refs:
 
 `netstat` is a command line utility that can be used to list out all the network (socket) connections on a system.
 ```sh
+# Enumerate services running on the target machine
+ps -ef
+netstat -anlp
+```
+```sh
 # List out all connections
 netstat -a
 # List out only tcp connections
