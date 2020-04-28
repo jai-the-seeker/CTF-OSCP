@@ -1,3 +1,6 @@
+* [Password Attack](#Password-Attack)
+  * [john the ripper](#john-the-ripper)
+
 # Password Attack
 Any possibility that the user will re use the password????
 
@@ -8,8 +11,10 @@ cewl -w createWordlist.txt -m <min password length> https://www.example.com
 ### Offline
 https://hashes.org/search.php
 
-john the ripper
+## john the ripper
+```sh
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
+```
 
 Hashcat << check type online - hashcat sample hash
 hashcat -m\<type> -a 0 /usr/share/wordlists/rockyou.txt hash.txt
