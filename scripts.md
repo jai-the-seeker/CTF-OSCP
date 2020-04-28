@@ -6,7 +6,7 @@
   * [Directory Listing](#Directory-Listing)
 * [System Commands](#System-Commands)
   * [`netstat`](#netstat)
-
+  * [`ps`](#ps)
 # Bash
 ## Sed
 ```bash
@@ -75,7 +75,7 @@ netstat -natu | grep 'ESTABLISHED' | grep 61.177.142.158
 netstat -an | grep 'LISTEN'
 netstat -tnl
 ```
-## 'ps'
+## `ps`
 ```sh
 # Display all processes in BSD format
 ps aux
