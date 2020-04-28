@@ -53,11 +53,11 @@ exploit
 #### http-get
 Options
 
-`-l` LOGIN or `-L` FILE  login with LOGIN name, or load several logins from FILE
+`-l` single LOGIN name or `-L` FILE having list of LOGIN names
 
-`-p` PASS  or `-P` FILE  try password PASS, or load several passwords from FILE
+`-p` single PASSWORD  or `-P` FILE having list of passwords
 
-`-t` TASKS  run TASKS number of connects in parallel per target (default: 16)
+`-t` Number of threads per target (default: 16)
 ```sh
 hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
 ```
