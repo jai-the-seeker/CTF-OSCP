@@ -5,7 +5,7 @@
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
 * [System Commands]
-  * [`netstat`](#`netstat`)
+  * [`netstat`](#netstat)
 ## `netstat`
 # Bash
 ## Sed
