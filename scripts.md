@@ -1,3 +1,8 @@
+* [Bash](#bash)
+  * [Sed](#sed)
+  * [`find`](#find)
+* [Useful Scripts](#Useful-Scripts)
+* [Authorization Token](#Authorization-Token)
 # Bash
 ## Sed
 ```bash
