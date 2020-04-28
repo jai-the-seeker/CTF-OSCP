@@ -75,6 +75,18 @@ netstat -natu | grep 'ESTABLISHED' | grep 61.177.142.158
 netstat -an | grep 'LISTEN'
 netstat -tnl
 ```
+## 'ps'
+```sh
+# Display all processes in BSD format
+ps aux
+```
+`-a` flag stands for all processes
+
+`-x` will display all processes even those not associated with the current tty
+```sh
+# To view a full format listing run
+ps -ef
+```
 # Basic Commands
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT>
