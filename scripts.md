@@ -4,7 +4,7 @@
 * [Useful Scripts](#Useful-Scripts)
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
-* [System Commands]
+* [System Commands](#System-Commands)
   * [`netstat`](#netstat)
 
 # Bash
