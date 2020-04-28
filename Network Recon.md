@@ -1,6 +1,12 @@
 * [Basic Scanning](#basic-scanning)
 * [Directory Listing](#directory-listing)
 * [Authentication](#authentication)
+  * [Basic Authentication](#basic-authentication)
+    * [metasploit](#metasploit)
+    * [hydra](#hydra)
+      * [http-get](#http-get)
+      * [http-post-form](#http-post-form)
+      * [ssh](#ssh)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
 
 # Basic Scanning
