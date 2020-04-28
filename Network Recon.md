@@ -7,6 +7,7 @@
       * [http-get](#http-get)
       * [http-post-form](#http-post-form)
       * [ssh](#ssh)
+   * [Token Authentication](#token-authentication)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
 
 # Basic Scanning
