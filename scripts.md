@@ -6,7 +6,7 @@
   * [Directory Listing](#Directory-Listing)
 * [System Commands]
   * [`netstat`](#netstat)
-## `netstat`
+
 # Bash
 ## Sed
 ```bash
