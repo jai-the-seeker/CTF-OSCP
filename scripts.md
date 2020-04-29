@@ -1,10 +1,11 @@
 * [Bash](#bash)
-  * [Sed](#sed)
-  * [`find`](#find)
+  * [Sed](#sed)  
 * [Useful Scripts](#Useful-Scripts)
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
 * [System Commands](#System-Commands)
+  * [`find`](#find)
+  * [`locate`](#locate)
   * [`netstat`](#netstat)
   * [`ps`](#ps)
 # Bash
@@ -14,11 +15,6 @@
 # sed 's/regexp/replace/g' filename.txt
 sed 's/,/ /g' filename.txt # replaces all comma with space
 sed 's/\//g' filename.txt # remove / 
-```
-## find
-```bash
-find ./ -type f -name '*.txt'
-find ./ -type f -perm 775 -user student
 ```
 # Useful Scripts
 ## Authorization Token
@@ -51,6 +47,16 @@ output
 ./testscript.sh 192.11.183.3 directory.txt
 ```
 # System Commands
+## `find`
+```bash
+find ./ -type f -name '*.txt'
+find ./ -type f -perm 775 -user student
+```
+## `locate`
+```sh
+# -i option to perform a case-insensitive search
+locate wordlist
+```
 ## `netstat`
 Refs:
 * <https://www.binarytides.com/linux-netstat-command-examples/>
