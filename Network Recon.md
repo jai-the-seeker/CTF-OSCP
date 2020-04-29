@@ -9,6 +9,11 @@
       * [ssh](#ssh)
    * [Token Authentication](#token-authentication)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
+  * [Fetch Header](#fetch-header)
+  * [wfuzz](#wfuzz)
+    * [User Agent String](#user-agent-string)
+    * [Header Missing](#header-missing)
+  
 
 # Basic Scanning
 ```sh
@@ -126,7 +131,7 @@ Here response code of `200` indicates that the `user-agent-string` is valid. The
 ```sh
 curl -H "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" 192.8.221.3/secret
 ```
-### Missing Header
+### Header Missing
 Refs:
 * <https://rootflag.io/hack-the-box-control/>
 
