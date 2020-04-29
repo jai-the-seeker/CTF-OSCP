@@ -1,7 +1,10 @@
-* [Password Attack](#Password-Attack)
+* [Hashcat](#hashcat)
 * [john the ripper](#john-the-ripper)
 
-# Password Attack
+# Hashcat
+
+
+
 ## Wordlists
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
