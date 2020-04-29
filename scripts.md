@@ -8,6 +8,10 @@
   * [`locate`](#locate)
   * [`netstat`](#netstat)
   * [`ps`](#ps)
+* [Basic Bash Commands and Constructs](#basic-bash-commands-and-constructs)
+  * [Basic Expressions](#basic-expressions)
+  * [If-else](#if-else)
+
 # Bash
 ## Sed
 ```bash
@@ -98,7 +102,7 @@ ps aux
 # To view a full format listing run
 ps -ef
 ```
-# Basic Commands
+# Basic Bash Commands and Constructs
 Refs :
 * <https://www.youtube.com/watch?v=LTuuMtQR1uQ&list=PLBf0hzazHTGMJzHon4YXGscxUvsFpxrZT>
 * <https://www.youtube.com/watch?v=aNQCl_ByM20>
