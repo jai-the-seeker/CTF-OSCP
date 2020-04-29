@@ -3,8 +3,8 @@
     * [Increment Mode](#increment-mode)
     * [Hashcat Mask Files](#hashcat-mask-files)
   * [Dictionary Attack](#dictionary-attack)
-     * [SHA-512](#sha-512)
-     * [MD5](#md5)
+  * [MD5](#md5)
+  
 * [john the ripper](#john-the-ripper)
 
 # Hashcat
@@ -61,7 +61,6 @@ Mask files have the file extension of `.hcmask` and can be used from the command
 hashcat -m 0 -a 3 hash masks.hcmask
 ```
 ## Dictionary Attack
-### SHA-512 
 Refs:
 * <https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-3-using-hashcat-0156543/>
 ```sh
@@ -76,9 +75,10 @@ hashcat -m 1800 -a 0 -o cracked.txt hash.lst /usr/share/sqlmap/txt/wordlist.txt
 `hash.lst` is our input file of hashes
 
 `/usr/share/sqlmap/txt/wordlist.txt` is the absolute path to our wordlist for this dictionary attack
-### MD5
-#### hash:salt
+## MD5
 ```sh
+# -m 0 : MD5 without salt
+
 # MD5 hash:salt 
 # cf0b18ddb1a31d05fc73f50fcd29e0a8:salt123
 hashcat -m 10 -a 0 digest.txt password-seclists.txt
