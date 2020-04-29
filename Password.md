@@ -1,4 +1,9 @@
 * [Hashcat](#hashcat)
+  * [Mask Based Attack](#mask-based-attack)
+    * [Increment Mode](#increment-mode)
+    * [Hashcat Mask Files](#hashcat-mask-files)
+  * [Dictionary Attack](#dictionary-attack)
+     * [SHA-512](#sha-512)
 * [john the ripper](#john-the-ripper)
 
 # Hashcat
@@ -54,12 +59,12 @@ Mask files have the file extension of `.hcmask` and can be used from the command
 ```sh 
 hashcat -m 0 -a 3 hash masks.hcmask
 ```
-
+## Dictionary Attack
+### SHA-512 
 Refs:
 * <https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-3-using-hashcat-0156543/>
-## SHA-512 Dictionary Attack
 ```sh
-hashcat -m 1800 -a 0 -o cracked.txt --remove hash.lst /usr/share/sqlmap/txt/wordlist.txt
+hashcat -m 1800 -a 0 -o cracked.txt hash.lst /usr/share/sqlmap/txt/wordlist.txt
 ```
 `-m` 1800 designates the type of hash we are cracking (SHA-512)
 
@@ -67,14 +72,9 @@ hashcat -m 1800 -a 0 -o cracked.txt --remove hash.lst /usr/share/sqlmap/txt/word
 
 `-o` cracked.txt is the output file for the cracked passwords
 
-`--remove` tells hashcat to remove the hash after it has been cracked
-
 `hash.lst` is our input file of hashes
 
 `/usr/share/sqlmap/txt/wordlist.txt` is the absolute path to our wordlist for this dictionary attack
-
-
-
 
 ## Wordlists
 Generate a custom wordlist
