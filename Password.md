@@ -4,6 +4,7 @@
     * [Hashcat Mask Files](#hashcat-mask-files)
   * [Dictionary Attack](#dictionary-attack)
      * [SHA-512](#sha-512)
+     * [MD5](#md5)
 * [john the ripper](#john-the-ripper)
 
 # Hashcat
@@ -75,7 +76,13 @@ hashcat -m 1800 -a 0 -o cracked.txt hash.lst /usr/share/sqlmap/txt/wordlist.txt
 `hash.lst` is our input file of hashes
 
 `/usr/share/sqlmap/txt/wordlist.txt` is the absolute path to our wordlist for this dictionary attack
-
+### MD5
+#### hash:salt
+```sh
+# MD5 hash:salt 
+# cf0b18ddb1a31d05fc73f50fcd29e0a8:salt123
+hashcat -m 10 -a 0 digest.txt password-seclists.txt
+```
 ## Wordlists
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
