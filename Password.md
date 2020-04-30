@@ -83,6 +83,19 @@ hashcat -m 1800 -a 0 -o cracked.txt hash.lst /usr/share/sqlmap/txt/wordlist.txt
 # cf0b18ddb1a31d05fc73f50fcd29e0a8:salt123
 hashcat -m 10 -a 0 digest.txt password-seclists.txt
 ```
+## HMAC
+HMAC is a keyed hash (authenticated hash) scheme which ensures that a specific hash value can only be generated if the entity possess a secret key. This scheme can be used to turn any existing hash function into an authenticated hash function which can be then used to check the authenticity of the message in addition to its integrity. HMAC-SHA1 was widely used in online banking security, HTTPS, VPN connections in addition to verify the integrity of the files/binaries. In essence, it is mostly used to protect the data in transit over insecure mediums. 
+
+A plain-text string and corresponding HMAC-SHA1 digest is provided in digest.txt file. The key used to generate the HMAC-SHA1 is either taken from a key dictionary or by using the key policy. The `digest.txt` file and the dictionary file `password-seclists.txt` is present in the user's home directory.
+
+Objective: Recover the secret key. 
+
+If the password file does not work then the Key Policy could be: 
+Key length is less than 6 characters i.e. 0 < length < 6
+Key can only contain characters from this character set:  a-z, 0-9
+```sh
+```
+
 ## Wordlists
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
