@@ -2,7 +2,7 @@
   * [`bash -p`](#bash--p)
 # SETUID
 ## `bash -p`
-The payload which is being processed by the Node.js server, upon de-serialization sets the setuid bit on `/bin/bash` binary. We can check the same as follows 
+The payload upon execution sets the `setuid` bit on `/bin/bash` binary. We can check the same as follows 
 ```sh
 $ ls -l /bin/bash
 -rwsr-sr-x 1 root root 1099016 May 15  2017 /bin/bash
