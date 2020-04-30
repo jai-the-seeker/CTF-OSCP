@@ -20,7 +20,7 @@ You can disable potfile support completely by using `--potfile-disable`
 # find hashcat.potfile
 find / -type f -name 'hashcat.potfile'
 
-# -n which tells echo to not output the trailing newline
+# -n tells echo not to output the trailing newline
 echo -n "" > /hashcat/hashcat-4.2.1/hashcat.potfile
 ```
 ## Mask Based Attack
