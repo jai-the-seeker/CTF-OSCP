@@ -9,6 +9,11 @@
 * [john the ripper](#john-the-ripper)
 
 # Hashcat
+## delete found password
+```sh
+find / -type f -name 'hashcat.potfile'
+echo -n "" > /hashcat/hashcat-4.2.1/hashcat.potfile
+```
 ## Mask Based Attack
 Refs
 * <https://hashcat.net/wiki/doku.php?id=mask_attack>
