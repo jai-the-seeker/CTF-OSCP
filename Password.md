@@ -98,11 +98,7 @@ HMAC is a keyed hash (authenticated hash) scheme which ensures that a specific h
 
 A plain-text string and corresponding HMAC-SHA1 digest is provided in digest.txt file. The key used to generate the HMAC-SHA1 is either taken from a key dictionary or by using the key policy. The `digest.txt` file and the dictionary file `password-seclists.txt` is present in the user's home directory.
 
-Objective: Recover the secret key. 
-
-If the password file does not work then the Key Policy could be: 
-Key length is less than 6 characters i.e. 0 < length < 6
-Key can only contain characters from this character set:  a-z, 0-9
+Objective: Recover the secret key.
 ```sh
 # hash:plaintext
 # 69f7e54d484620ed6e9d731ca51780a000463fc2:tinkerbell97
