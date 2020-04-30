@@ -1,4 +1,5 @@
 * [Hashcat](#hashcat)
+  * [delete found password](#delete-found-password)
   * [Mask Based Attack](#mask-based-attack)
     * [Increment Mode](#increment-mode)
     * [Hashcat Mask Files](#hashcat-mask-files)
