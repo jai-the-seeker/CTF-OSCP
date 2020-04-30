@@ -11,6 +11,7 @@
 
 # Hashcat
 ## delete found password
+You can disable potfile support completely by using `--potfile-disable`
 ```sh
 # find hashcat.potfile
 find / -type f -name 'hashcat.potfile'
