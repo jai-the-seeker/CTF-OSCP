@@ -4,6 +4,7 @@
     * [Hashcat Mask Files](#hashcat-mask-files)
   * [Dictionary Attack](#dictionary-attack)
   * [MD5](#md5)
+  * [HMAC](#hmac)
   
 * [john the ripper](#john-the-ripper)
 
@@ -94,6 +95,9 @@ If the password file does not work then the Key Policy could be:
 Key length is less than 6 characters i.e. 0 < length < 6
 Key can only contain characters from this character set:  a-z, 0-9
 ```sh
+# hash:plaintext
+# 69f7e54d484620ed6e9d731ca51780a000463fc2:tinkerbell97
+hashcat -m 150 -a 0 digest.txt password-seclists.txt
 ```
 
 ## Wordlists
