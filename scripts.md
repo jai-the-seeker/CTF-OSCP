@@ -105,7 +105,7 @@ ps -ef
 ```
 ## empty file
 ```
-# To send a null output to the file, use the flag -n which tells echo to not output the trailing newline
+# -n tells echo to not output the trailing newline
 echo -n "" > access.log
 # The truncate command helps to shrink or extend the size of a file to a defined size.
 
