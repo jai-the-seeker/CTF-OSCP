@@ -1,4 +1,19 @@
-# Linux privilege escalation
+* [setuid](#setuid)
+  * [`bash -p`](#bash--p)
+# SETUID
+## `bash -p`
+The payload which is being processed by the Node.js server, upon de-serialization sets the setuid bit on /bin/bash binary. 
+```sh
+
+```
+If a `setuid` bit is set on a binary, the binary can be executed with the effective user id of the user who owns the binary. In this case the setuid/setgid bit is set on bash which is owned by root.
+
+By default, if the effective user id and the real user id are not equal, bash will set the effective user id to the real user id. In this case, the bash process will be started with the user "user".
+
+In order, to prevent the effective user id from resetting to the real user id, the "-p" option has to be passed. Upon running the command `bash -p`, the bash binary will run with effective user id 0, providing a root shell.
+```sh
+```
+
 ### Spawn Interactive Shell and set env  
 
 python -c 'import pty;pty.spawn("/bin/bash");'  
