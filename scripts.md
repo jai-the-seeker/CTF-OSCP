@@ -105,10 +105,10 @@ ps -ef
 ```
 ## empty file
 ```
-# -n tells echo to not output the trailing newline
+# -n tells echo not to output the trailing newline
 echo -n "" > access.log
-# The truncate command helps to shrink or extend the size of a file to a defined size.
 
+# The truncate command helps to shrink or extend the size of a file to a defined size.
 # -s option specifies the file size
 truncate -s 0 access.log
 ```
