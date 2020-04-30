@@ -79,17 +79,15 @@ hashcat -m 0 -a 3 hash masks.hcmask
 Refs:
 * <https://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-passwords-part-3-using-hashcat-0156543/>
 ```sh
-hashcat -m 1800 -a 0 -o cracked.txt hash.lst /usr/share/sqlmap/txt/wordlist.txt
+hashcat -m 1800 -a 0 hash.lst wordlist.txt
 ```
 `-m` 1800 designates the type of hash we are cracking (SHA-512)
 
 `-a 0` designates a dictionary attack
 
-`-o` cracked.txt is the output file for the cracked passwords
-
 `hash.lst` is our input file of hashes
 
-`/usr/share/sqlmap/txt/wordlist.txt` is the absolute path to our wordlist for this dictionary attack
+`wordlist.txt` is the absolute path to our wordlist for this dictionary attack
 ## MD5
 ```sh
 # -m 0 : MD5 without salt
