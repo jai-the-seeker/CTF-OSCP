@@ -8,6 +8,7 @@
   * [`locate`](#locate)
   * [`netstat`](#netstat)
   * [`ps`](#ps)
+  * [empty file](#empty-file)
 * [Basic Bash Commands and Constructs](#basic-bash-commands-and-constructs)
   * [Basic Expressions](#basic-expressions)
   * [If-else](#if-else)
@@ -101,6 +102,15 @@ ps aux
 ```sh
 # To view a full format listing run
 ps -ef
+```
+## empty file
+```
+# To send a null output to the file, use the flag -n which tells echo to not output the trailing newline
+echo -n "" > access.log
+# The truncate command helps to shrink or extend the size of a file to a defined size.
+
+# -s option specifies the file size
+truncate -s 0 access.log
 ```
 # Basic Bash Commands and Constructs
 Refs :
