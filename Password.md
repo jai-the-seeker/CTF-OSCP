@@ -1,4 +1,5 @@
 * [Hashcat](#hashcat)
+  * [example hashes](#example-hashes)
   * [delete found password](#delete-found-password)
   * [Mask Based Attack](#mask-based-attack)
     * [Increment Mode](#increment-mode)
@@ -6,10 +7,13 @@
   * [Dictionary Attack](#dictionary-attack)
   * [MD5](#md5)
   * [HMAC](#hmac)
+  * [CRC32](#crc32)
   
 * [john the ripper](#john-the-ripper)
 
 # Hashcat
+## example hashes
+* <https://hashcat.net/wiki/doku.php?id=example_hashes>
 ## delete found password
 You can disable potfile support completely by using `--potfile-disable`
 ```sh
@@ -100,12 +104,18 @@ HMAC is a keyed hash (authenticated hash) scheme which ensures that a specific h
 A plain-text string and corresponding HMAC-SHA1 digest is provided in digest.txt file. The key used to generate the HMAC-SHA1 is either taken from a key dictionary or by using the key policy. The `digest.txt` file and the dictionary file `password-seclists.txt` is present in the user's home directory.
 
 Objective: Recover the secret key.
+`150	HMAC-SHA1 (key = $pass)	c898896f3f70f61bc3fb19bef222aa860e5ea717:1234` from [example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 ```sh
+# 
 # hash:plaintext
 # 69f7e54d484620ed6e9d731ca51780a000463fc2:tinkerbell97
 hashcat -m 150 -a 0 digest.txt password-seclists.txt
 ```
-
+## CRC32
+`11500	CRC32 5	c762de4a:00000000` from [example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+```sh
+hashcat -m 11500 -a 0 digest.txt password-seclists.txt
+```
 ## Wordlists
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
