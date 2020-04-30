@@ -2,6 +2,7 @@
   * [example hashes](#example-hashes)
   * [delete found password](#delete-found-password)
   * [Mask Based Attack](#mask-based-attack)
+    * [Setup Mask](#setup-mask)
     * [Increment Mode](#increment-mode)
     * [Hashcat Mask Files](#hashcat-mask-files)
   * [Dictionary Attack](#dictionary-attack)
@@ -24,6 +25,7 @@ find / -type f -name 'hashcat.potfile'
 echo -n "" > /hashcat/hashcat-4.2.1/hashcat.potfile
 ```
 ## Mask Based Attack
+### Setup Mask
 Refs
 * <https://hashcat.net/wiki/doku.php?id=mask_attack>
 * <https://www.4armed.com/blog/perform-mask-attack-hashcat/>
