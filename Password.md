@@ -104,6 +104,7 @@ HMAC is a keyed hash (authenticated hash) scheme which ensures that a specific h
 A plain-text string and corresponding HMAC-SHA1 digest is provided in digest.txt file. The key used to generate the HMAC-SHA1 is either taken from a key dictionary or by using the key policy. The `digest.txt` file and the dictionary file `password-seclists.txt` is present in the user's home directory.
 
 Objective: Recover the secret key.
+
 `150	HMAC-SHA1 (key = $pass)	c898896f3f70f61bc3fb19bef222aa860e5ea717:1234` from [example hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
 ```sh
 # 
