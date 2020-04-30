@@ -126,9 +126,6 @@ cewl -w createWordlist.txt -m <min password length> https://www.example.com
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
 ```
 
-Hashcat << check type online - hashcat sample hash
-hashcat -m\<type> -a 0 /usr/share/wordlists/rockyou.txt hash.txt
-
 # WiFi
 ## WEP
 ```sh
