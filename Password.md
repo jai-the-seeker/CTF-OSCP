@@ -121,9 +121,6 @@ hashcat -m 11500 -a 0 digest.txt password-seclists.txt
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
 
-## Offline
-https://hashes.org/search.php
-
 # john the ripper
 ```sh
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
