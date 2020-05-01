@@ -188,6 +188,24 @@ archive.zip:$pkzip2$1*2*2*0*2d*21*c10509e*0*3f*0*2d*0c10*360a*f5e92c2b27b0f6ece9
 
 john --wordlist=1000000-password-seclists.txt hash
 ```
+## MS word .docx
+MS Office 2013
+```sh
+office2john MS_Word_Document.docx > hash
+
+$ cat hash
+MS_Word_Document.docx:$office$*2013*100000*256*16*ff2563844faca58a12fc42c5036f9cf8*ffaf52db903dbcb6ac2db4bab6d343ab*c237403ec97e5f68b7be3324a8633c9ff95e0bb44b1efcf798c70271a54336a2
+
+john --wordlist=password-seclists.txt hash
+```
+Using Hashcat
+```sh
+# Make the hashes compatible with hashcat
+cat hash
+$office$*2013*100000*256*16*ff2563844faca58a12fc42c5036f9cf8*ffaf52db903dbcb6ac2db4bab6d343ab*c237403ec97e5f68b7be3324a8633c9ff95e0bb44b1efcf798c70271a54336a2
+
+hashcat -m 9600 hash -a 0 password-seclists.txt
+```
 # WiFi
 ## WEP
 ```sh
