@@ -154,6 +154,7 @@ hashcat -m 3200 -a 0 digest.txt password-seclists.txt
 # Wordlists
 ## Generate a custom wordlist
 `CeWL` is a ruby app which spiders a given url to a specified depth, optionally following external links, and returns a list of words which can then be used for password crackers such as John the Ripper.
+Refer : <https://tools.kali.org/password-attacks/cewl>
 ```sh
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
 ```
