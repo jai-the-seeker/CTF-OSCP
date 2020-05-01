@@ -17,6 +17,7 @@
 * [Wordlists](#wordlists)  
 * [john the ripper](#john-the-ripper)
 * [Protected Files](#protected-files)
+  * [RAR](#rar)
 
 # Hashcat
 ## example hashes
