@@ -165,7 +165,16 @@ cewl -d 2 -m 5 -w docswords.txt https://example.com
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
 ```
 # Protected Files
+## RAR
+```sh
+rar2john archive.rar > hash
 
+cat hash
+$rar5$16$50d889a2c6441510dd0c8ab76dde4fd6$15$697757daca178f6f88135491827bdad6$8$e13f0c4d2f8286d5
+
+john --wordlist=password-seclists.txt hash
+hashcat -m 13000 hash -a 0 password-seclists.txt
+```
 # WiFi
 ## WEP
 ```sh
