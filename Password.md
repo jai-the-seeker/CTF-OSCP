@@ -20,6 +20,7 @@
   * [RAR](#rar)
   * [PKZIP](#pkzip)
   * [MS word .docx](#ms-word-docx)
+  * [MS word .doc](#ms-word-doc)
 
 # Hashcat
 ## example hashes
@@ -206,6 +207,24 @@ cat hash
 $office$*2013*100000*256*16*ff2563844faca58a12fc42c5036f9cf8*ffaf52db903dbcb6ac2db4bab6d343ab*c237403ec97e5f68b7be3324a8633c9ff95e0bb44b1efcf798c70271a54336a2
 
 hashcat -m 9600 hash -a 0 password-seclists.txt
+```
+## MS word .doc
+MS Office 1997-2003
+```sh
+office2john MS_Word_Document_97_2003.doc > hash
+
+$ cat hash
+MS_Word_Document_97_2003.doc:$oldoffice$4*f1efb1c529cff63cb08cf439df074c5d*9256d6abe8325534e7dae97f9f5967d9*8f015d410f45812c5e554ab7a147f1d9285ff6ea:::::MS_Word_Document_97_2003.doc
+
+john --wordlist=password-seclists.txt hash
+```
+Using Hashcat
+```sh
+# Make the hashes compatible with hashcat
+cat hash
+$oldoffice$4*f1efb1c529cff63cb08cf439df074c5d*9256d6abe8325534e7dae97f9f5967d9*8f015d410f45812c5e554ab7a147f1d9285ff6ea
+
+hashcat -m 9800 hash -a 0 password-seclists.txt
 ```
 # WiFi
 ## WEP
