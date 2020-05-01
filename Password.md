@@ -14,7 +14,7 @@
   * [MD5Crypt](#md5Crypt)
   * [Bcrypt](#bcrypt)
   
-  
+* [Wordlists](#wordlists)  
 * [john the ripper](#john-the-ripper)
 * [Protected Files](#protected-files)
 
