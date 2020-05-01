@@ -9,6 +9,11 @@
   * [MD5](#md5)
   * [HMAC](#hmac)
   * [CRC32](#crc32)
+  * [SHA1](#sha1)
+  * [NTLM](*ntlm)
+  * [MD5Crypt](#md5Crypt)
+  * [Bcrypt](#bcrypt)
+  
   
 * [john the ripper](#john-the-ripper)
 
@@ -117,6 +122,33 @@ hashcat -m 150 -a 0 digest.txt password-seclists.txt
 ```sh
 hashcat -m 11500 -a 0 digest.txt password-seclists.txt
 ```
+## SHA1
+```sh
+hashcat -m 100 digest.txt -a 0 password-seclists.txt
+```
+## NTLM
+```sh
+hashcat -m 1000 -a 0 digest.txt password-seclists.txt
+```
+## MD5Crypt
+```sh
+hashcat -m 500 digest.txt -a 0 1000000-password-seclists.txt
+```
+## Bcrypt
+`Bcrypt` is a popular 184-bit password hashing function designed by Niels Provos and David Mazières in 1999. It is based on `blowfish` cipher.  It is default password hashing algorithm for OpenBSD and other OSes like SUSE Linux.
+```sh
+$ cat digest.txt
+Digest: gLX3.eb.sPNURq3Y87bx/eUC9Ysw6mZhi1HAWvy07DWYyw9zYI3.W
+Rounds: 4
+```
+This input format is not compatible to Hashcat. So, modify it
+```sh
+$ cat digest.txt
+$2a$04$gLX3.eb.sPNURq3Y87bx/eUC9Ysw6mZhi1HAWvy07DWYyw9zYI3.W
+
+hashcat -m 3200 -a 0 digest.txt password-seclists.txt
+```
+
 ## Wordlists
 Generate a custom wordlist
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
