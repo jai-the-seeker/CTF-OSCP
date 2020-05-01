@@ -19,6 +19,7 @@
 * [Protected Files](#protected-files)
   * [RAR](#rar)
   * [PKZIP](#pkzip)
+  * [MS word .docx](#ms-word-docx)
 
 # Hashcat
 ## example hashes
