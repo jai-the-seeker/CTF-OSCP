@@ -54,8 +54,8 @@ output
 # System Commands
 ## `find`
 ```bash
-find ./ -type f -name '*.txt'
-find ./ -type f -perm 775 -user student
+find / -type f -name '*.txt'
+find / -type f -perm 775 -user student
 ```
 ## `locate`
 ```sh
