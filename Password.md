@@ -18,6 +18,7 @@
 * [john the ripper](#john-the-ripper)
 * [Protected Files](#protected-files)
   * [RAR](#rar)
+  * [PKZIP](#pkzip)
 
 # Hashcat
 ## example hashes
@@ -176,6 +177,16 @@ $rar5$16$50d889a2c6441510dd0c8ab76dde4fd6$15$697757daca178f6f88135491827bdad6$8$
 
 john --wordlist=password-seclists.txt hash
 hashcat -m 13000 hash -a 0 password-seclists.txt
+```
+## PKZIP
+We have to use JTR because at the time of writing this document, PKZIP is not supported by hashcat
+```sh
+zip2john archive.zip > hash
+
+cat hash
+archive.zip:$pkzip2$1*2*2*0*2d*21*c10509e*0*3f*0*2d*0c10*360a*f5e92c2b27b0f6ece97e6030ccb3338eb42b7c5ec117f4b49bfb0232e1e45e1673c6ef2fb8c952ba2410a770aa*$/pkzip2$:::::archive.zip
+
+john --wordlist=1000000-password-seclists.txt hash
 ```
 # WiFi
 ## WEP
