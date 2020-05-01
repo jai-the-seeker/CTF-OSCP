@@ -16,6 +16,7 @@
   
   
 * [john the ripper](#john-the-ripper)
+* [Protected Files](#protected-files)
 
 # Hashcat
 ## example hashes
@@ -149,14 +150,21 @@ $2a$04$gLX3.eb.sPNURq3Y87bx/eUC9Ysw6mZhi1HAWvy07DWYyw9zYI3.W
 hashcat -m 3200 -a 0 digest.txt password-seclists.txt
 ```
 
-## Wordlists
-Generate a custom wordlist
+# Wordlists
+## Generate a custom wordlist
+`CeWL` is a ruby app which spiders a given url to a specified depth, optionally following external links, and returns a list of words which can then be used for password crackers such as John the Ripper.
+```sh
 cewl -w createWordlist.txt -m <min password length> https://www.example.com
-
+```
+Scan to a depth of 2 `-d 2` and use a minimum word length of 5 `-m 5`, save the words to a file `-w docswords.txt`, targeting the given URL (https://example.com):
+```sh
+cewl -d 2 -m 5 -w docswords.txt https://example.com
+```
 # john the ripper
 ```sh
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
 ```
+# Protected Files
 
 # WiFi
 ## WEP
