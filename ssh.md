@@ -1,7 +1,10 @@
+* [`SSH` Server on Kali Linux)[#ssh-server-on-kali-linux]
+  * [Install `SSH` server](#install-ssh-server)
+  * [Enable root account access from `ssh`](#enable-root-account-access-from-ssh)
+
+# `SSH` Server on Kali Linux
 Ref
 * <https://www.youtube.com/watch?v=hX4eWqAKQpE>
-
-# Enable `SSH` on Kali Linux
 
 ## Install `SSH` server
 This step is usually not required in Kali Linux as it comes preinstalled with `ssh` server. However, if its not installed, you can use
@@ -17,7 +20,7 @@ Change following in the config file
 ```
 PermitRootLogin yes
 ```
-Now, `start` the service
+Now, `start` the service and check its status
 ```
 service ssh start
 service ssh status
