@@ -1,4 +1,4 @@
-* [`SSH` Server on Kali Linux)[#ssh-server-on-kali-linux]
+* [`SSH` Server on Kali Linux](#ssh-server-on-kali-linux)
   * [Install `SSH` server](#install-ssh-server)
   * [Enable root account access from `ssh`](#enable-root-account-access-from-ssh)
 
