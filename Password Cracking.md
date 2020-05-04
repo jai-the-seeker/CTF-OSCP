@@ -59,6 +59,7 @@ hashcat -m 0 -a 3 digest.txt -1 ?l?d ?1?1?1?1?1
 ?l?l?l?l?l
 ?l?l?l?l?l?l?l
 ```
+In order to limit the increment within a specified range use `--increment-min` and `increment-max` options
 ### Hashcat Mask Files
 Let us consider the following scenario for creating a password masking attack:
 
