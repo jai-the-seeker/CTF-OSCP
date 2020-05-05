@@ -6,7 +6,7 @@
 * [Perform an HTTP PUT request](#perform-an-http-put-request)
 * [Follow a redirect](#follow-a-redirect)
 * [Store the response to a file](#store-the-response-to-a-file)
-* [Using HTTP authentication](#using-http-authentication)
+* [Using HTTP authentication login](#using-http-authentication-login)
 * [Set a different User Agent](#set-a-different-user-agent)
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
@@ -70,7 +70,7 @@ You can also just save a file by its name on the server, using the O option:
 ```sh
 curl -O https://flaviocopes.com/index.html
 ```
-# Using HTTP authentication
+# Using HTTP authentication login
 If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
 ```sh
 curl -u user:pass https://flaviocopes.com/
