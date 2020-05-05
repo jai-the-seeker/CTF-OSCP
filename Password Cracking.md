@@ -10,7 +10,7 @@
   * [HMAC](#hmac)
   * [CRC32](#crc32)
   * [SHA1](#sha1)
-  * [NTLM](*ntlm)
+  * [NTLM](#ntlm)
   * [MD5Crypt](#md5Crypt)
   * [Bcrypt](#bcrypt)
   
