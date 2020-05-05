@@ -11,6 +11,9 @@
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
 
+Refs
+* <https://flaviocopes.com/http-curl/>
+
 # Perform an HTTP GET request
 When you perform a request, curl will return the body of the response:
 ```sh
@@ -106,8 +109,7 @@ Date: Mon, 30 Jul 2018 08:08:41 GMT
 ```
 
 
-Refs
-* <https://flaviocopes.com/http-curl/>
+
 
 ## HTTP Login
 ```sh
