@@ -103,34 +103,5 @@ curl --user-agent "my-user-agent" https://flaviocopes.com
 Use the `--verbose` option to make curl output all the details of the request, and the response:
 ```sh
 curl --verbose -I https://flaviocopes.com/
-*   Trying 178.128.202.129...
-* TCP_NODELAY set
-* Connected to flaviocopes.com (178.128.202.129) port 443 (#0)
-* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-* Server certificate: flaviocopes.com
-* Server certificate: Let's Encrypt Authority X3
-* Server certificate: DST Root CA X3
-> HEAD / HTTP/1.1
-> Host: flaviocopes.com
-> User-Agent: curl/7.54.0
-> Accept: */*
->
-< HTTP/1.1 200 OK
-HTTP/1.1 200 OK
-< Cache-Control: public, max-age=0, must-revalidate
-Cache-Control: public, max-age=0, must-revalidate
-< Content-Type: text/html; charset=UTF-8
-Content-Type: text/html; charset=UTF-8
-< Date: Mon, 30 Jul 2018 08:08:41 GMT
-Date: Mon, 30 Jul 2018 08:08:41 GMT
 ```
 
-
-
-
-
-## Fetch Headers
-```sh
-# curl -I to fetch headers and read the protection type from those headers
-curl -I http://192.165.34.3/dir
-```
