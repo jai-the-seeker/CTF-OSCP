@@ -1,3 +1,7 @@
+* [HTTP authentication](#http-authentication)
+  * [Basic authentication](#basic-authentication)
+  * [Digest Authentication](#digest-authentication)
+  * [Token Authentication](#token-authentication)
 * [Perform an HTTP GET request](#perform-an-http-get-request)
 * [Get the HTTP response headers](#get-the-http-response-headers)
 * [Only get the HTTP response headers](#only-get-the-http-response-headers)
@@ -6,7 +10,6 @@
 * [Perform an HTTP PUT request](#perform-an-http-put-request)
 * [Follow a redirect](#follow-a-redirect)
 * [Store the response to a file](#store-the-response-to-a-file)
-* [Using HTTP authentication login](#using-http-authentication-login)
 * [Set a different User Agent](#set-a-different-user-agent)
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
@@ -14,6 +17,24 @@
 Refs
 * <https://flaviocopes.com/http-curl/>
 
+# HTTP authentication
+## Basic authentication
+If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
+```sh
+curl -u user:pass https://flaviocopes.com/
+curl -u bob:qwerty http://192.165.34.3/dir/
+```
+## Digest Authentication
+
+```sh
+curl --digest -u alice:password1 http://192.165.34.3/poc/
+```
+## Token Authentication
+
+```sh
+# -H, --header <header/@file> Pass custom header(s) to server
+curl -H 'Authorization: Token 123123123' 192.186.248.3
+```
 # Perform an HTTP GET request
 When you perform a request, curl will return the body of the response:
 ```sh
@@ -70,11 +91,7 @@ You can also just save a file by its name on the server, using the O option:
 ```sh
 curl -O https://flaviocopes.com/index.html
 ```
-# Using HTTP authentication login
-If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
-```sh
-curl -u user:pass https://flaviocopes.com/
-```
+
 # Set a different User Agent
 The user agent tells the server which client is performing the request. By default curl sends the `curl/<version> user agent, like: curl/7.54.0.`
 
@@ -111,18 +128,7 @@ Date: Mon, 30 Jul 2018 08:08:41 GMT
 
 
 
-## HTTP Login
-```sh
-# HTTP Basic Authentication
-curl -u bob:qwerty http://192.165.34.3/dir/
 
-# HTTP Digest Authentication
-curl --digest -u alice:password1 http://192.165.34.3/poc/
-
-# HTTP Token Authentication
-# -H, --header <header/@file> Pass custom header(s) to server
-curl -H 'Authorization: Token 123123123' 192.186.248.3
-```
 ## Fetch Headers
 ```sh
 # curl -I to fetch headers and read the protection type from those headers
