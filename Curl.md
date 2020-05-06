@@ -1,7 +1,4 @@
-* [HTTP authentication](#http-authentication)
-  * [Basic authentication](#basic-authentication)
-  * [Digest Authentication](#digest-authentication)
-  * [Token Authentication](#token-authentication)
+* [HTTP basic authentication](#http-basic-authentication)
 * [Perform an HTTP GET request](#perform-an-http-get-request)
 * [Get the HTTP response headers](#get-the-http-response-headers)
 * [Only get the HTTP response headers](#only-get-the-http-response-headers)
@@ -17,23 +14,11 @@
 Refs
 * <https://flaviocopes.com/http-curl/>
 
-# HTTP authentication
-## Basic authentication
+# HTTP basic authentication
 If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
 ```sh
 curl -u user:pass https://flaviocopes.com/
 curl -u bob:qwerty http://192.165.34.3/dir/
-```
-## Digest Authentication
-
-```sh
-curl --digest -u alice:password1 http://192.165.34.3/poc/
-```
-## Token Authentication
-
-```sh
-# -H, --header <header/@file> Pass custom header(s) to server
-curl -H 'Authorization: Token 123123123' 192.186.248.3
 ```
 # Perform an HTTP GET request
 When you perform a request, curl will return the body of the response:
