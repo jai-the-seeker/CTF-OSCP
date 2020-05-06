@@ -2,19 +2,18 @@
 * [Directory Listing](#directory-listing)
 * [Authentication](#authentication)
   * [Basic Authentication](#basic-authentication)
-    * [metasploit](#metasploit)
-    * [hydra](#hydra)
-      * [http-get](#http-get)
-      * [http-post-form](#http-post-form)
-      * [ssh](#ssh)
-   * [Token Authentication](#token-authentication)
+  * [Digest Authentication](#digest-authentication)
+  * [Token Authentication](#token-authentication)
+  * [hydra](#hydra)
+    * [http-get](#http-get)
+    * [http-post-form](#http-post-form)
+    * [ssh](#ssh)   
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
   * [Fetch Header](#fetch-header)
   * [wfuzz](#wfuzz)
     * [Fuzzing User Agent String](#fuzzing-user-agent-string)
     * [Fuzzing Missing Header](#fuzzing-missing-header)
   
-
 # Basic Scanning
 ```sh
 # version of the running services
@@ -26,10 +25,13 @@ nmap -sV -sC 192.165.34.3
 curl -I http://192.165.34.3/dir
 ```
 # Directory Listing
+## Metasploit
 ```sh
 # bruteforce on web server directories and list the names of directories found using msfconsole
 use auxiliary/scanner/http/brute_dirs
-
+```
+## Dirb
+```sh
 # DIRB  IS  a  Web Content Scanner. It looks for existing (and/or hidden) Web Objects. It basically works by
 # launching a dictionary basesd attack against a web server and analizing the response.
 # Note: Please remember to remove the preceding ‘/’ from each of directory name entry (in the
@@ -41,7 +43,12 @@ We can use curl to check for all the directories listed in the wordlist. This ca
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
 
 # Authentication
-## Basic Authentication
+## Basic authentication
+If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
+```sh
+curl -u user:pass https://flaviocopes.com/
+curl -u bob:qwerty http://192.165.34.3/dir/
+```
 ### metasploit 
 
 `http_login` module
@@ -54,34 +61,9 @@ set VERBOSE false
 set AUTH_URI /poc/
 exploit
 ```
-### Hydra
-#### http-get
-Options
-
-`-l` single LOGIN name or `-L` FILE having list of LOGIN names
-
-`-p` single PASSWORD  or `-P` FILE having list of passwords
-
-`-t` Number of threads per target (default: 16)
+## Digest Authentication
 ```sh
-hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
-```
-#### http-post-form
-Ref
-* <https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/>
-* <https://www.youtube.com/watch?v=fFnEdoCyVhk&list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw&index=63>
-
-syntax
-```sh
-hydra -L <USER> -P <Password> <IP Address> http-post-form "<Login Page>:<Request Body>:<Error Message>"
-```
-Example:
-```sh
-hydra -L usernames.txt -P passwords.txt 192.168.2.62 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
-```
-#### ssh
-```sh
-hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt -t 6 ssh://192.168.1.123
+curl --digest -u alice:password1 http://192.165.34.3/poc/
 ```
 ## Token Authentication
 Hydra and metasploit `http_login` module doesn’t support token authentication.
@@ -96,10 +78,39 @@ You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/maste
 
 After performing the dictionary attack we will get the password, which can be used to set the token in the headers
 ```sh
+# -H, --header <header/@file> Pass custom header(s) to server
 curl -H 'Authorization: Token 123123123' 192.186.248.3
 ```
 
+## Hydra
+### http-get
+Options
 
+`-l` single LOGIN name or `-L` FILE having list of LOGIN names
+
+`-p` single PASSWORD  or `-P` FILE having list of passwords
+
+`-t` Number of threads per target (default: 16)
+```sh
+hydra -L unix_users.txt -P passwords.txt 192.148.69.3 http-get /
+```
+### http-post-form
+Ref
+* <https://redteamtutorials.com/2018/10/25/hydra-brute-force-https/>
+* <https://www.youtube.com/watch?v=fFnEdoCyVhk&list=PLYmlEoSHldN7HJapyiQ8kFLUsk_a7EjCw&index=63>
+
+syntax
+```sh
+hydra -L <USER> -P <Password> <IP Address> http-post-form "<Login Page>:<Request Body>:<Error Message>"
+```
+Example:
+```sh
+hydra -L usernames.txt -P passwords.txt 192.168.2.62 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login Failed"
+```
+### ssh
+```sh
+hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt -t 6 ssh://192.168.1.123
+```
 # Header Fuzzing and Manipulation
 ## Fetch Header
 ```sh
