@@ -11,8 +11,8 @@
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
   * [Fetch Header](#fetch-header)
   * [wfuzz](#wfuzz)
-    * [User Agent String](#user-agent-string)
-    * [Header Missing](#header-missing)
+    * [Fuzzing User Agent String](#fuzzing-user-agent-string)
+    * [Fuzzing Missing Header](#fuzzing-missing-header)
   
 
 # Basic Scanning
@@ -115,7 +115,7 @@ Official Website
 There are two db wordlists associated with `wfuzz` which can be obtained from
 * <https://code.google.com/p/fuzzdb/>
 * <https://github.com/danielmiessler/SecLists>
-### User Agent String
+### Fuzzing User Agent String
 We can use `wfuzz` to check for various valid strings of the `User-Agent` by passing it a wordlist containing possible user agents strings.
 The word list can of user-agents can be obtained from <https://github.com/fuzzdb-project/fuzzdb/blob/master/discovery/UserAgent/UserAgentListCommon.txt>
 ```sh
@@ -131,7 +131,7 @@ Here response code of `200` indicates that the `user-agent-string` is valid. The
 ```sh
 curl -H "User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6" 192.8.221.3/secret
 ```
-### Header Missing
+### Fuzzing Missing Header
 Refs:
 * <https://rootflag.io/hack-the-box-control/>
 
