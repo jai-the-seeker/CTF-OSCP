@@ -7,7 +7,7 @@ The payload upon execution sets the `setuid` bit on `/bin/bash` binary. We can c
 $ ls -l /bin/bash
 -rwsr-sr-x 1 root root 1099016 May 15  2017 /bin/bash
 ```
-If a `setuid` bit is set on a binary, the binary can be executed with the effective user id of the user who owns the binary. In this case the setuid/setgid bit is set `on` `bash` which is owned by `root`.
+If a `setuid` bit is set on a binary, the binary can be executed with the effective user id of the user who owns the binary. In this case the setuid/setgid bit is set on `bash` which is owned by `root`.
 
 By default, if the effective user id and the real user id are not equal, `bash` will set the effective user id to the real user id. In this case, the bash process will be started with the user `user`.
 
