@@ -9,7 +9,9 @@
 * [Store the response to a file](#store-the-response-to-a-file)
 * [Set a different User Agent](#set-a-different-user-agent)
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
-* [Use the specified proxy](#use-the-specified-proxy)
+* [Proxy](#proxy)
+  * [username and password for proxy](#username-and-password-for-proxy)
+  * [username and password for HTTP server](#username-and-password-for-HTTP-server)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
 
 Refs
@@ -91,13 +93,22 @@ Use the `--verbose` option to make curl output all the details of the request, a
 ```sh
 curl --verbose -I https://flaviocopes.com/
 ```
-# Use the specified proxy
+# proxy
 ```sh
 -x, --proxy [protocol://]host[:port]
 curl -x 192.201.208.3:3128 127.0.0.1
 ```
 The proxy string can be specified with a protocol:// prefix. No protocol specified or http:// will be treated as HTTP proxy. Use socks4://, socks4a://, socks5:// or socks5h:// to request a specific SOCKS version to be used.
 
+## username and password for proxy
+```sh
+# curl -x <[protocol://][user:password@]proxyhost[:port]> url
+# Example 1
+curl -x http://user:password@proxy-IP-here:port url-of-website:port
+# Example 2
+curl -x admin:laurie@192.142.49.3:3128 127.0.0.1:1996
+```
+## username and password for HTTP server
 ```sh
 # Get a file from an HTTP server that requires user and password, using the proxy:
 curl -u user:passwd -x my-proxy:888 http://www.get.this/
