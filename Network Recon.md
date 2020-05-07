@@ -9,7 +9,7 @@ nmap -sC -v -p- 192.143.147.3
 ```
 # Proxy
 ## Proxy Authentication
-If the proxy is configured with authentication, any attempts made via proxy will return an `access denied` error. In case the proxy is configured without authentication,  The connection will be forwarded by the proxy and the error message will be different than `Access denied` error.
+If the proxy is configured with authentication, any attempts made via proxy will return an `access denied` error. In case the proxy is configured without authentication, the connection will be forwarded by the proxy and the error message will be different than `Access denied` error.
 
 By using the command `curl -x 192.201.208.3:3128 127.0.0.1`. We are looking for a different error message than `Access Denied`. Provided the proxy does not use any authentication, in case if a service is running, (for e.g an apache server) an HTTP response will be received, if no service is running then the connection refused error will be received. Either of the error will confirm that the proxy is configured without authentication.
 
