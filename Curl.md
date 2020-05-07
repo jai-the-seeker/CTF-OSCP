@@ -9,6 +9,7 @@
 * [Store the response to a file](#store-the-response-to-a-file)
 * [Set a different User Agent](#set-a-different-user-agent)
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
+* [Use the specified proxy](#use-the-specified-proxy)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
 
 Refs
@@ -89,4 +90,11 @@ Use the `--verbose` option to make curl output all the details of the request, a
 ```sh
 curl --verbose -I https://flaviocopes.com/
 ```
+# Use the specified proxy
+```sh
+-x, --proxy [protocol://]host[:port]
+curl -x 192.201.208.3:3128 127.0.0.1
+```
+The proxy string can be specified with a protocol:// prefix. No protocol specified or http:// will be treated as HTTP proxy. Use socks4://, socks4a://, socks5:// or socks5h:// to request a specific SOCKS version to be used.
+
 
