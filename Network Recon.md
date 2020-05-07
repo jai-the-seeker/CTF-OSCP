@@ -3,6 +3,11 @@
 * [Proxy](#proxy)
   * [Proxy Authentication](#proxy-authentication)
   * [Open Authentication](#open-authentication)
+  * [Proxychains](#proxychains)
+    * [Configure proxychain](#configure-proxychain)
+    * [Proxychain with `nmap`](#proxychain-with-nmap)
+    * [Proxychain with `curl`](#proxychain-with-curl)
+  
 
 # Basic Scanning
 ```sh
@@ -16,7 +21,8 @@ If the proxy is configured with authentication, any attempts made via proxy will
 
 By using the command `curl -x 192.201.208.3:3128 127.0.0.1`. We are looking for a different error message than `Access Denied`. Provided the proxy does not use any authentication, in case if a service is running, (for e.g an apache server) an HTTP response will be received, if no service is running then the connection refused error will be received. Either of the error will confirm that the proxy is configured without authentication. The following example shows that squid proxy is configured without authentication.
 ```sh
-curl -i -x 192.234.192.3:3128 127.0.0.1
+$ curl -i -x 192.234.192.3:3128 127.0.0.1
+
 HTTP/1.1 503 Service Unavailable
 Server: squid/3.5.12
 ...
