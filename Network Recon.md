@@ -17,9 +17,9 @@ By using the command `curl -x 192.201.208.3:3128 127.0.0.1`. We are looking for 
 
 Proxychains is a tool which forces the TCP connection to go through the configured proxy(s). Proxychians can force the connection through multiple proxy servers. For e.g, if you have the following proxychains configuration (with strict chain option):
 
-socks5 192.200.34.4
-socks5 192.200.33.5
-socks4 192.200.32.6
+- socks5 192.200.34.4
+- socks5 192.200.33.5
+- socks4 192.200.32.6
 
 The TCP connection will be sent through proxy servers in the following order.
 
