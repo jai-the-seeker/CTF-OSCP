@@ -2,7 +2,7 @@
 * [Basic Scanning](#basic-scanning)
 * [Proxy](#proxy)
   * [Proxy Authentication](#proxy-authentication)
-  * [Open Authentication](#open-authentication)
+    * [Open Authentication](#open-authentication)
   * [Proxychains](#proxychains)
     * [Configure proxychain](#configure-proxychain)
     * [Proxychain with `nmap`](#proxychain-with-nmap)
