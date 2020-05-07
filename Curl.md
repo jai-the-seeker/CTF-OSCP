@@ -14,6 +14,7 @@
 
 Refs
 * <https://flaviocopes.com/http-curl/>
+* <https://curl.haxx.se/docs/manual.html>
 
 # HTTP basic authentication
 If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
@@ -94,7 +95,12 @@ curl --verbose -I https://flaviocopes.com/
 ```sh
 -x, --proxy [protocol://]host[:port]
 curl -x 192.201.208.3:3128 127.0.0.1
+
+# Get a file from an HTTP server that requires user and password, using the same proxy as above:
+curl -u user:passwd -x my-proxy:888 http://www.get.this/
 ```
 The proxy string can be specified with a protocol:// prefix. No protocol specified or http:// will be treated as HTTP proxy. Use socks4://, socks4a://, socks5:// or socks5h:// to request a specific SOCKS version to be used.
+
+
 
 
