@@ -1,5 +1,4 @@
 
-* [Basic Scanning](#basic-scanning)
 * [Proxy](#proxy)
   * [Proxy Authentication](#proxy-authentication)
     * [Open Authentication](#open-authentication)
@@ -11,11 +10,6 @@
     * [Proxychain with `curl`](#proxychain-with-curl)
   
 
-# Basic Scanning
-```sh
-nmap -A -v -p- 192.143.147.3
-nmap -sC -v -p- 192.143.147.3
-```
 # Proxy
 ## Proxy Authentication
 ### Open Authentication
