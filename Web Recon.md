@@ -55,9 +55,7 @@ set AUTH_URI /poc/
 exploit
 ```
 ## Digest Authentication
-```sh
-curl --digest -u alice:password1 http://192.165.34.3/poc/
-```
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#digest-authentication>
 ## Token Authentication
 Hydra and metasploit `http_login` module doesn’t support token authentication.
 We have to set the token in headers for token auth to work.
