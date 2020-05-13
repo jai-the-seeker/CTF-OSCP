@@ -15,15 +15,11 @@
     * [Fuzzing Missing Header](#fuzzing-missing-header)
   
 # Basic Scanning
-```sh
-# version of the running services
-# -sV: Probe open ports to determine service/version info
-# -sC: equivalent to --script=default
-nmap -sV -sC 192.165.34.3
+## nmap
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/nmap.md#basic-scans>
+## curl
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#http-response-headers>
 
-# curl -I to fetch headers and read the protection type from those headers
-curl -I http://192.165.34.3/dir
-```
 # Directory Listing
 ## Metasploit
 ```sh
