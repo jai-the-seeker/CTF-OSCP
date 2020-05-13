@@ -9,7 +9,7 @@
 * [Store the response to a file](#store-the-response-to-a-file)
 * [Set a different User Agent](#set-a-different-user-agent)
 * [Inspecting all the details of the request and the response](#inspecting-all-the-details-of-the-request-and-the-response)
-* [Proxy](#proxy)
+* [Proxy `-x`](#proxy)
   * [username and password for proxy](#username-and-password-for-proxy)
   * [username and password for HTTP server](#username-and-password-for-HTTP-server)
 * [Copying any browser network request to a curl command](#copying-any-browser-network-request-to-a-curl-command)
