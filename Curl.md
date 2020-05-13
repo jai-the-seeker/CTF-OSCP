@@ -1,4 +1,7 @@
-* [HTTP basic authentication](#http-basic-authentication)
+* [HTTP Authentication](#http-authentication)
+  * [HTTP basic authentication](#http-basic-authentication)
+  * [Digest Authentication](#digest-authentication)
+  * [Token Authentication](#token-authentication)
 * [Perform an HTTP GET request](#perform-an-http-get-request)
 * [HTTP Response Headers](#http-response-headers)
   * [response headers `i`](#response-headers-i)
@@ -19,11 +22,31 @@ Refs
 * <https://flaviocopes.com/http-curl/>
 * <https://curl.haxx.se/docs/manual.html>
 
-# HTTP basic authentication
+# HTTP Authentication
+## HTTP basic authentication
 If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
 ```sh
 curl -u user:pass https://flaviocopes.com/
 curl -u bob:qwerty http://192.165.34.3/dir/
+```
+## Digest Authentication
+```sh
+curl --digest -u alice:password1 http://192.165.34.3/poc/
+```
+## Token Authentication
+We have to set the token in headers for token authentication to work.
+```sh
+curl -H 'Authorization: Token <token>' 192.183.171.3
+```
+We have to write a custom wrapper around this command. In the script, we will rely on the fact
+that on using the correct token, we will get something else than "Unauthorized Access".
+
+You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#authorization-token>
+
+After performing the dictionary attack we will get the password, which can be used to set the token in the headers
+```sh
+# -H, --header <header/@file> Pass custom header(s) to server
+curl -H 'Authorization: Token 123123123' 192.186.248.3
 ```
 # Perform an HTTP GET request
 When you perform a request, curl will return the body of the response:
