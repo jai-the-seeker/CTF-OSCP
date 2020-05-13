@@ -3,8 +3,6 @@
 * [HTTP Response Headers](#http-response-headers)
   * [response headers `i`](#response-headers-i)
   * [Only response headers `I`](#only-response-headers-I)
-[Get the HTTP response headers](#get-the-http-response-headers)
-* [Only get the HTTP response headers](#only-get-the-http-response-headers)
 * [Perform an HTTP POST request](#perform-an-http-post-request)
 * [Perform an HTTP POST request sending JSON](#perform-an-http-post-request-sending-json)
 * [Perform an HTTP PUT request](#perform-an-http-put-request)
