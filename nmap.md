@@ -1,6 +1,19 @@
+* [Scans](#scans)
+  * [Basic Scans](#basic-scans)
 * [scripts](#scripts)
   * [brute](#brute)
     * [http-proxy-brute](#http-proxy-brute)
+# scans
+## basic scans
+```sh
+# version of the running services
+# -sV: Probe open ports to determine service/version info
+# -sC: equivalent to --script=default
+nmap -sV -sC 192.165.34.3
+
+# Alternatively
+nmap -A 192.165.34.3
+```
 # scripts
 ## brute
 ### http-proxy-brute
