@@ -13,6 +13,15 @@
 * [Basic Bash Commands and Constructs](#basic-bash-commands-and-constructs)
   * [Basic Expressions](#basic-expressions)
   * [If-else](#if-else)
+  * [Menu select](#menu-select)
+  * [`test` Expressions](#test-expressions)
+  * [for loops](#for-loops)
+  * [for-in-loops](#for-in-loops)
+  * [Functions](#functions)
+    * [Arguments](#arguments)
+    * [Local Variables](#local-variables)
+    * [Exit codes](#exit-codes)
+  * [Read file line by line](#read-file-line-by-line)
 
 # Bash
 ## Sed
