@@ -77,7 +77,9 @@ http 192.234.192.3 3128
 ```
 ### Proxychain with `nmap`
 We can use proxychain, to scan the target machine, we are forcing the traffic of `nmap` to go through the HTTP Proxy server.
-Since, we have configured `http` proxy, we need to use `-sT` flag with `nmap`.
+
+
+* Since, we have configured `http` proxy, we need to use `-sT` flag with `nmap`.
 ```sh
 proxychains nmap -sV -sT -p- 127.0.0.1
 ```
