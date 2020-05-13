@@ -1,6 +1,9 @@
 * [HTTP basic authentication](#http-basic-authentication)
 * [Perform an HTTP GET request](#perform-an-http-get-request)
-* [Get the HTTP response headers](#get-the-http-response-headers)
+* [HTTP Response Headers](#http-response-headers)
+  * [response headers `i`](#response-headers-i)
+  * [Only response headers `I`](#only-response-headers-I)
+[Get the HTTP response headers](#get-the-http-response-headers)
 * [Only get the HTTP response headers](#only-get-the-http-response-headers)
 * [Perform an HTTP POST request](#perform-an-http-post-request)
 * [Perform an HTTP POST request sending JSON](#perform-an-http-post-request-sending-json)
@@ -29,12 +32,13 @@ When you perform a request, curl will return the body of the response:
 ```sh
 curl https://flaviocopes.com/
 ```
-# Get the HTTP response headers
+# HTTP response headers
+## response headers `i`
 By default the response headers are hidden in the output of curl. To show them, use the `i` option:
 ```sh
 curl -i https://flaviocopes.com/
 ```
-# Only get the HTTP response headers
+## Only response headers `I`
 Using the `I` option, you can get only the headers, and not the response body:
 ```sh
 curl -I https://flaviocopes.com/
