@@ -3,6 +3,7 @@
 * [Useful Scripts](#Useful-Scripts)
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
+  * [proxy authentication dictionary attk](#proxy-authentication-dictionary-attk)
 * [System Commands](#System-Commands)
   * [`find`](#find)
   * [`locate`](#locate)
