@@ -40,11 +40,8 @@ We can use curl to check for all the directories listed in the wordlist. This ca
 
 # Authentication
 ## Basic authentication
-If a resource requires Basic HTTP Authentication, you can use the `u` option to pass the `user:password values`:
-```sh
-curl -u user:pass https://flaviocopes.com/
-curl -u bob:qwerty http://192.165.34.3/dir/
-```
+### curl
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#http-basic-authentication>
 ### metasploit 
 
 `http_login` module
