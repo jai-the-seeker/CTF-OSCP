@@ -50,25 +50,7 @@ Connection: keep-alive
 ...
 ```
 ### username and password
-#### HTTP server authentication
-The curl `-u` option is used to specify credentials for the *target* server authentication and not for the *proxy* server authentication.
-
-For e.g, when you are using the command `curl -u admin:laurie -x 192.173.117.3:3128 127.0.0.1:1996`. The credentials `admin:laurie` are *not* being passed as credentials to the proxy server, instead, they are passed as a part of the request which is supposed to be forwarded to the target server.  The option value will be considered as credentials for the target server authentication and not for the proxy authentication.
-
-The above command will work in the scenario where the proxy server is configured without authentication, but the target server is protected with authentication (basic/digest authentication). This way, the connection will be forwarded by the proxy server and the credentials will be used to authenticate with the target server.
-#### proxy authnetication
-In order to pass the credentials to the proxy server, you will have to use the curl option `-U`. Therefore, the following command will work:
-```sh
-curl -U admin:laurie -x 192.173.117.3:3128 127.0.0.1:1996
-```
-Alternatively,
-```sh
-# curl -x <[protocol://][user:password@]proxyhost[:port]> url
-# Example 1
-curl -x http://user:password@proxy-IP-here:port url-of-website:port
-# Example 2
-curl -x admin:laurie@192.142.49.3:3128 127.0.0.1:1996
-```
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#username-and-password-for-proxy>
 ### bruteforce
 #### nmap
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/nmap.md#http-proxy-brute>
