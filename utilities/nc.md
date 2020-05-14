@@ -31,7 +31,9 @@ netcat -l -p 6789 > recv_file
 netcat -v -w1 -z <target_ip> <port_range>
 ```
 `-v`  : verbose
+
 `-w1` : wait for 1 sec before timeout
+
 `-z`  : No I/O
 ## executing program
 - The program can be an executable file (EXE, ELF, etc) or a script (shell, ruby, python etc)
