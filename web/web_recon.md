@@ -16,9 +16,9 @@
   
 # Basic Scanning
 ## nmap
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/nmap.md#basic-scans>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/nmap.md#basic-scans>
 ## curl
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#http-response-headers>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/curl.md#http-response-headers>
 
 # Directory Listing
 ## Metasploit
@@ -36,12 +36,12 @@ dirb http://192.166.161.3 directory.txt
 ```
 ## Using `curl` and bash script
 We can use curl to check for all the directories listed in the wordlist. This can be done by a following wrapper bash script
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#directory-listing>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts/bash_scripts.md#directory-listing>
 
 # Authentication
 ## Basic authentication
 ### curl
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#http-basic-authentication>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/curl.md#http-basic-authentication>
 ### metasploit 
 
 `http_login` module
@@ -55,7 +55,7 @@ set AUTH_URI /poc/
 exploit
 ```
 ## Digest Authentication
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#digest-authentication>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/curl.md#digest-authentication>
 ## Token Authentication
 Hydra and metasploit `http_login` module doesn’t support token authentication.
 We have to set the token in headers for token auth to work.
@@ -65,7 +65,7 @@ curl -H 'Authorization: Token <token>' 192.183.171.3
 We have to write a custom wrapper around this command. In the script, we will rely on the fact
 that on using the correct token, we will get something else than "Unauthorized Access".
 
-You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#authorization-token>
+You can refer this script <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts/bash_scripts.md#authorization-token>
 
 After performing the dictionary attack we will get the password, which can be used to set the token in the headers
 ```sh
