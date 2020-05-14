@@ -3,6 +3,8 @@
 * [scripts](#scripts)
   * [brute](#brute)
     * [http-proxy-brute](#http-proxy-brute)
+  * [discovery](#discovery)
+    * [banner](#banner)
 # scans
 ## basic scans
 ```sh
@@ -24,4 +26,10 @@ nmap --script http-proxy-brute -p3128 192.144.18.3
 To use different username and password lists, set the arguments `userdb` and `passdb` : 
 ```sh
 nmap --script http-proxy-brute -p3128 192.144.18.3 --script-args userdb=usernames.lst,passdb=passwords.lst
+```
+## discovery
+### banner
+```sh
+# nmap -sV --script=banner <target>
+nmap -sV --script=banner -p- 192.162.110.3
 ```
