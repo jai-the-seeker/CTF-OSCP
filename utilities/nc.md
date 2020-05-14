@@ -1,4 +1,11 @@
 * [Netcat](#netcat)
+  * [banner grabbing](#banner-grabbing)
+  * [listener](#listener)
+  * [transfer file](#transfer-file)
+  * [port scanning](#port-scanning)
+  * [executing program](#executing-program)
+  * [running shell](#running-shell)
+  * [relaying](#relaying)
 
 # Netcat
 Refs:
