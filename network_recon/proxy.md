@@ -8,8 +8,6 @@
     * [Configure proxychain](#configure-proxychain)
     * [Proxychain with `nmap`](#proxychain-with-nmap)
     * [Proxychain with `curl`](#proxychain-with-curl)
-* [SMTP](#smtp)
-  
 
 # Proxy
 ## Proxy Authentication
@@ -93,6 +91,4 @@ curl -x 192.201.208.3:3128 127.0.0.1:1337
 # The above command is same as
 proxychains curl 127.0.0.1:1337
 ```
-# SMTP
-Refs
-* <https://blog.mailtrap.io/smtp-commands-and-responses/>
+
