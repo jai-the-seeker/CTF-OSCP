@@ -45,12 +45,12 @@ Connection: keep-alive
 ...
 ```
 ### username and password
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/Curl.md#username-and-password-for-proxy>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/curl.md#username-and-password-for-proxy>
 ### bruteforce
 #### nmap
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/nmap.md#http-proxy-brute>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/nmap.md#http-proxy-brute>
 #### bash script
-<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts.md#proxy-authentication-dictionary-attk>
+<https://github.com/jai-the-seeker/CTF-OSCP/blob/master/scripts/bash_scripts.md#proxy-authentication-dictionary-attk>
 ## Proxychains
 
 Proxychains is a tool which forces the TCP connection to go through the configured proxy(s). Proxychians can force the connection through multiple proxy servers. For e.g, if you have the following proxychains configuration (with strict chain option):
