@@ -9,8 +9,6 @@
     * [using `sendemail`](#using-sendemail)
 
 # SMTP
-Refs
-* <https://blog.mailtrap.io/smtp-commands-and-responses/>
 ## grab banner
 ### nmap
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/nmap.md#banner>
@@ -19,6 +17,9 @@ Refs
 
 ## enumerating username
 ### using commands
+Refs
+* <https://blog.mailtrap.io/smtp-commands-and-responses/>
+
 Enumeration is performed by inspecting the responses to VRFY, EXPN and RCPT TO commands.
 #### `VRFY`
 ```sh
