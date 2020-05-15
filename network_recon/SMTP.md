@@ -5,6 +5,8 @@
     * [`smtp-user-enum`](#smtp-user-enum)
     * [metasploit `smtp_enum`](#metasploit-smtp_enum)
   * [send mail](#send-mail)
+    * [using `telnet`](#using-telnet)
+    * [using `sendemail`](#using-sendemail)
 
 # SMTP
 Refs
@@ -58,6 +60,7 @@ smtp-user-enum -U usernames.txt -t 192.186.235.3
 > set RHOSTS 192.186.235.3 \
 > exploit 
 ## send mail
+### using `telnet`
 ```sh
 telnet 192.186.235.3 25
 HELO attacker.xyz
@@ -72,3 +75,8 @@ Admin
 .
 ```
 Note: There is a dot(.) in the last line which indicates the termination of data.
+### using `sendemail`
+```sh
+$ sendemail -f admin@attacker.xyz -t root@victim-1 -s 192.91.109.3 -u Fakemail -m "Hi root, a fake from admin" -o tls=no
+May 15 09:21:55 attackdefense sendemail[110]: Email was sent successfully!
+```
