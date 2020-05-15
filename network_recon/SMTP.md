@@ -1,7 +1,7 @@
 * [SMTP](#smtp)
   * [grab banner](#grab-banner)
   * [enumerating username](#enumerating-username)
-    * [manually](#manually)
+    * [using commands](#using-commands)
     * [`smtp-user-enum`](#smtp-user-enum)
     * [metasploit `smtp_enum`](#metasploit-smtp_enum)
   * [send mail](#send-mail)
@@ -18,7 +18,7 @@ Refs
 <https://github.com/jai-the-seeker/CTF-OSCP/blob/master/utilities/nc.md#banner-grabbing>
 
 ## enumerating username
-### manually
+### using commands
 Enumeration is performed by inspecting the responses to VRFY, EXPN and RCPT TO commands.
 #### `VRFY`
 ```sh
