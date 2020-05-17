@@ -1,3 +1,5 @@
+* [`hash-identifier`](#hash-identifier)
+* [hash online websites](#hash-online-websites)
 * [Hashcat](#hashcat)
   * [example hashes](#example-hashes)
   * [delete found password](#delete-found-password)
@@ -12,16 +14,24 @@
   * [SHA1](#sha1)
   * [NTLM](#ntlm)
   * [MD5Crypt](#md5Crypt)
-  * [Bcrypt](#bcrypt)
-  
-* [Wordlists](#wordlists)  
-* [john the ripper](#john-the-ripper)
+  * [Bcrypt](#bcrypt)  
+* [Wordlists](#wordlists)
 * [Protected Files](#protected-files)
   * [RAR](#rar)
   * [PKZIP](#pkzip)
   * [MS word .docx](#ms-word-docx)
   * [MS word .doc](#ms-word-doc)
+* [john the ripper](#john-the-ripper)
 
+# `hash-identifier`
+* <https://tools.kali.org/password-attacks/hash-identifier>
+```
+hash-identifier
+```
+* Any hash ending with `c` is most likely MD5
+# hash online websites
+* <https://hashes.org/search.php>
+* <https://hashes.com/en/decrypt/hash>
 # Hashcat
 ## example hashes
 * <https://hashcat.net/wiki/doku.php?id=example_hashes>
