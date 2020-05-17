@@ -16,12 +16,13 @@
   * [MD5Crypt](#md5Crypt)
   * [Bcrypt](#bcrypt)  
 * [Wordlists](#wordlists)
+* [john the ripper](#john-the-ripper)
 * [Protected Files](#protected-files)
   * [RAR](#rar)
   * [PKZIP](#pkzip)
   * [MS word .docx](#ms-word-docx)
   * [MS word .doc](#ms-word-doc)
-* [john the ripper](#john-the-ripper)
+
 
 # `hash-identifier`
 * <https://tools.kali.org/password-attacks/hash-identifier>
