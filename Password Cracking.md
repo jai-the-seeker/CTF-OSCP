@@ -2,7 +2,7 @@
 * [hash online websites](#hash-online-websites)
 * [Hashcat](#hashcat)
   * [example hashes](#example-hashes)
-  * [delete found password](#delete-found-password)
+  * [show delete found password](#show-delete-found-password)
   * [Mask Based Attack](#mask-based-attack)
     * [Setup Mask](#setup-mask)
     * [Increment Mode](#increment-mode)
@@ -36,7 +36,12 @@ hash-identifier
 # Hashcat
 ## example hashes
 * <https://hashcat.net/wiki/doku.php?id=example_hashes>
-## delete found password
+## show delete found password
+To show an existing cracked password use `--show` flag in the end like
+```sh
+hashcat -m 0 -a 0 digest.txt /usr/share/wordlists/rockyou.txt --force --show
+```
+
 You can disable potfile support completely by using `--potfile-disable`
 ```sh
 # find hashcat.potfile
