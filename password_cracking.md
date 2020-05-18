@@ -223,6 +223,7 @@ cracked hashes in the terminal with the command: `john --show passwd`
 # Protected Files
 ## RAR
 ```sh
+# extract hashes of .rar file
 rar2john archive.rar > hash
 
 cat hash
@@ -234,6 +235,7 @@ hashcat -m 13000 hash -a 0 password-seclists.txt
 ## PKZIP
 We have to use JTR because at the time of writing this document, PKZIP is not supported by hashcat
 ```sh
+# extract hashes of .zip file
 zip2john archive.zip > hash
 
 cat hash
@@ -244,6 +246,7 @@ john --wordlist=1000000-password-seclists.txt hash
 ## MS word .docx
 MS Office 2013
 ```sh
+# extract hashes of .docx file
 office2john MS_Word_Document.docx > hash
 
 $ cat hash
