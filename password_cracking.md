@@ -211,7 +211,7 @@ $ john --format=raw-sha224 hashes.txt
 SHA512
 $ john --format=raw-sha512 hashes.txt
 ```
-Others hash formats supported by John the Ripper: http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+Other hash formats supported by John the Ripper: http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
 
 ## john pot file
 ### How to clear crakced hash from database
