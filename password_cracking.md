@@ -29,7 +29,7 @@
 ```
 hash-identifier
 ```
-* Any hash with `32` characters is MD5
+* Any hash with `32` characters is `MD5`
 ```sh
 echo -n 8743b52063cd84097a65d1633f5c74f5 | wc -c
 32
@@ -123,7 +123,7 @@ hashcat -m 1800 -a 0 hash.lst wordlist.txt
 
 `wordlist.txt` is the absolute path to our wordlist for this dictionary attack
 ## MD5
-* Any hash with `32` characters is MD5
+* Any hash with `32` characters is `MD5`
 ```sh
 echo -n 8743b52063cd84097a65d1633f5c74f5 | wc -c
 32
