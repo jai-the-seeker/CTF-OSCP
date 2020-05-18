@@ -194,9 +194,32 @@ Scan to a depth of 2 `-d 2` and use a minimum word length of 5 `-m 5`, save the 
 cewl -d 2 -m 5 -w docswords.txt https://example.com
 ```
 # john the ripper
+John HASH cracking using dictionary
 ```sh
 john --wordlist=/user/share/wordlists/rockyou.txt hash.txt
 ```
+```
+MD5
+$ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+
+SHA1
+$ john --format=raw-sha1 hashes.txt
+
+SHA224
+$ john --format=raw-sha224 hashes.txt
+
+SHA512
+$ john --format=raw-sha512 hashes.txt
+```
+Others hash formats supported by John the Ripper: http://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+
+## john pot file
+### How to clear crakced hash from database
+As you can see in the docs http://www.openwall.com/john/doc/, John (and almost any good hash cracker) will store the 
+cracked hashes in some sort of file/db.
+This is for performance, this programs will check for already cracked hashes preventing them to spend cpu/gpu time.
+In the case of John, is located at: `$JOHN/john.pot` (`$JOHN` path depends on the install). You can view the previously 
+cracked hashes in the terminal with the command: `john --show passwd`
 # Protected Files
 ## RAR
 ```sh
