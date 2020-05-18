@@ -29,7 +29,11 @@
 ```
 hash-identifier
 ```
-* Any hash ending with `c` is most likely MD5
+* Any hash ending with `32` characters is MD5
+```sh
+echo -n 8743b52063cd84097a65d1633f5c74f5 | wc -c
+32
+```
 # hash online websites
 * <https://hashes.org/search.php>
 * <https://hashes.com/en/decrypt/hash>
