@@ -2,6 +2,7 @@
 * [INFORMATION_SCHEMA](#information_schema)
 * [Manual Methods](#manual-methods)
   * [enumerate fields of search query](#enumerate-fields-of-search-query)
+  * [show database](#show-database)
 
 # `sqlmap`
 
