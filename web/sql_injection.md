@@ -1,5 +1,6 @@
 * [`sqlmap`](#sqlmap)
 * [INFORMATION_SCHEMA](#information_schema)
+  * [INFORMATION_SCHEMA Tables](#information_schema-tables)
 * [Manual Methods](#manual-methods)
   * [enumerate fields of search query](#enumerate-fields-of-search-query)
   * [show database](#show-database)
@@ -13,6 +14,11 @@ Refs:
 INFORMATION_SCHEMA provides access to database metadata.
 
 Metadata is data about the data, such as the name of a database or table, the data type of a column, or access privileges. INFORMATION_SCHEMA is the information database, the place that stores information about all the other databases that the MySQL server maintains. Inside INFORMATION_SCHEMA there are several read-only tables. They are actually views, not base tables, so there are no files associated with them.
+## INFORMATION_SCHEMA Tables
+* <https://dev.mysql.com/doc/refman/8.0/en/columns-table.html>
+* <https://dev.mysql.com/doc/refman/8.0/en/schemata-table.html>
+* <https://dev.mysql.com/doc/refman/8.0/en/st-units-of-measure-table.html>
+
 # Manual Methods
 ## enumerate fields of search query
 In burpsuite, go to repeater mode and keep on increasing the numbers till the fields of search query gets printed on the webpage
