@@ -2,6 +2,7 @@
 * [INFORMATION_SCHEMA](#information_schema)
   * [INFORMATION_SCHEMA Tables](#information_schema-tables)
 * [Manual Methods](#manual-methods)
+  * [check vulnerability](#check-vulnerability)
   * [enumerate fields of search query](#enumerate-fields-of-search-query)
   * [enumerate databases](#enumerate-databases)
   * [enumerate tables](#enumerate-tables)
@@ -23,6 +24,10 @@ Metadata is data about the data, such as the name of a database or table, the da
 * <https://dev.mysql.com/doc/refman/8.0/en/st-units-of-measure-table.html>
 
 # Manual Methods
+## check vulnerability
+```
+search=killer' or 1='1
+```
 ## enumerate fields of search query
 In burpsuite, go to repeater mode and keep on increasing the numbers till the fields of search query gets printed on the webpage
 ```
