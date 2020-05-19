@@ -130,6 +130,11 @@ Ref
 ```
 medusa -h 192.168.1.102 -u msfadmin -P customwordlist.txt -M ssh -n 22
 ```
+`-h` : target hostname,
+`-u` : username,
+`-P` : a dictionary file,
+`-M` : the module to execute like SSH, FTP etc,
+`-n` : port number wrt to module
 # Header Fuzzing and Manipulation
 ## Fetch Header
 ```sh
