@@ -33,7 +33,7 @@ sed 's/,/ /g' filename.txt # replaces all comma with space
 sed 's/\//g' filename.txt # remove / from filename.txt
 ```
 ## awk
-```bash
+```sh
 awk -F: '{print $1} creds # prints first coulumn of file creds which contains : separated values
 awk -F, '{print $1} creds # prints first coulumn of file creds which contains , separated values
 ```
