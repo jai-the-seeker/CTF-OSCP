@@ -1,5 +1,6 @@
 * [Bash](#bash)
   * [Sed](#sed)  
+  * [awk](#awk)
 * [Useful Scripts](#Useful-Scripts)
   * [Authorization Token](#Authorization-Token)
   * [Directory Listing](#Directory-Listing)
@@ -29,7 +30,12 @@
 # Format
 # sed 's/regexp/replace/g' filename.txt
 sed 's/,/ /g' filename.txt # replaces all comma with space
-sed 's/\//g' filename.txt # remove / 
+sed 's/\//g' filename.txt # remove / from filename.txt
+```
+## awk
+```bash
+awk -F: '{print $1} creds # prints first coulumn of file creds separated by :
+awk -F, '{print $1} creds # prints first coulumn of file creds separated by ,
 ```
 # Useful Scripts
 ## Authorization Token
