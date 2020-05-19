@@ -110,7 +110,7 @@ Refs:
 
 * <https://nmap.org/ncrack/man.html>
 
-Use verbose mode (`-v`), read a list of IP addresses (`-iL` win.txt), and attempt to login with the username victim (`–user` victim) along with the passwords in a dictionary (`-P` passes.txt) using the RDP protocol (`-p` rdp) with a one connection at a time (`CL=1`):
+Use verbose mode (`-v`), read a list of IP addresses (`-iL` win.txt), and attempt to login with the username victim (`--user` victim) along with the passwords in a dictionary (`-P` passes.txt) using the RDP protocol (`-p` rdp) with a one connection at a time (`CL=1`):
 ```
 root@kali:~# ncrack -v -iL win.txt --user victim -P passes.txt -p rdp CL=1
 ```
