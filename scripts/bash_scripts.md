@@ -34,8 +34,8 @@ sed 's/\//g' filename.txt # remove / from filename.txt
 ```
 ## awk
 ```bash
-awk -F: '{print $1} creds # prints first coulumn of file creds separated by :
-awk -F, '{print $1} creds # prints first coulumn of file creds separated by ,
+awk -F: '{print $1} creds # prints first coulumn of file creds which contains : separated values
+awk -F, '{print $1} creds # prints first coulumn of file creds which contains , separated values
 ```
 # Useful Scripts
 ## Authorization Token
