@@ -1,6 +1,6 @@
 * [`sqlmap`](#sqlmap)
-  * [get request](#get-request)
-  * [post request](#post-request)
+  * [GET request](#get-request)
+  * [POST request](#post-request)
   * [databases](#databases)
   * [tables](#tables)
   * [data](#data)
@@ -18,11 +18,11 @@
 
 # `sqlmap`
 If we know the DBMS, we can use option `--dbms=mysql`
-## get request
+## GET request
 ```
 sqlmap -u "http://example.com/?a=1&b=2&c=3" -p "a,b"
 ```
-## post request
+## POST request
 ```
 sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
 ```
