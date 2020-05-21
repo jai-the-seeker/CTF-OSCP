@@ -15,7 +15,7 @@
   * [wfuzz](#wfuzz)
     * [Fuzzing User Agent String](#fuzzing-user-agent-string)
     * [Fuzzing Missing Header](#fuzzing-missing-header)
-    * [Fuzzing Paramater for LFI](#fuzzing-parameter-for-lfi)
+    * [Fuzzing Parameter for LFI](#fuzzing-parameter-for-lfi)
   
 # Basic Scanning
 ## nmap
@@ -187,7 +187,7 @@ A quick breakdown of the above command:
 `FUZZ:FUZ2Z` These are the two header parameters we are fuzzing. `FUZZ` is for the first wordlist specified. `FUZ2Z` is for the second word list specified. So we have something like this in the header of our request: "Acces-Control-Allow-Origin:192.168.4.44"
 
 `http://10.10.10.167/admin.php` Lastly, the target URL.
-### Fuzzing Paramater for LFI
+### Fuzzing Parameter for LFI
 Refs:
 * <https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/burp-parameter-names.txt>
 ```
