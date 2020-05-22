@@ -38,6 +38,13 @@ echo -n 8743b52063cd84097a65d1633f5c74f5 | wc -c
 # hash online websites
 * <https://hashes.org/search.php>
 * <https://hashes.com/en/decrypt/hash>
+## findmyhash
+* <https://tools.kali.org/password-attacks/findmyhash>
+
+Specifying the hash algorithm `MD5`, attempt to crack the given hash `-h 098f6bcd4621d373cade4e832627b4f6`:
+```
+root@kali:~# findmyhash MD5 -h 098f6bcd4621d373cade4e832627b4f6
+```
 # Hashcat
 ## example hashes
 * <https://hashcat.net/wiki/doku.php?id=example_hashes>
