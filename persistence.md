@@ -16,4 +16,9 @@ $ scp student@192.224.16.3:~/.ssh/id_rsa .
 $ chmod 400 id_rsa
 $ ssh -i id_rsa student@192.224.16.3
 ```
+Example of private SSH keys lying in the computer
+
+__Example case I:__  A development server that compiles, pulls/pushes code from a central code repository, and deploys the application/software on a test server might have private keys of deployment server and code server (to automate things and avoid credentials every time).
+
+__Example case II:__ For automation, a lot of tools like Ansible, use SSH-based connections to multiple target machines, and perform a set of pre-defined actions. In this case, the machine hosting the Ansible will have the private keys.
 
