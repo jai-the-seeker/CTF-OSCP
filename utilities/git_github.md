@@ -27,7 +27,7 @@
 ### Clone the remote repo to local
 ```
 $ git clone https://github.com/jai-the-seeker/website.git
-# Alternatively, if you want to clone in to a new directory then,
+# Alternatively, if you want to clone into a new directory then,
 # make a new directory and cd into the new directory
 $ git clone https://github.com/jai-the-seeker/website.git .
 ```
