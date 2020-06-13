@@ -11,16 +11,22 @@
 
 **Cheat Sheet**
 [https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
-
-
+```
     $ git clone <repository>
-
     $ git add .
-
     $ git commit -m "my message"
-
-    $ git push
-
+    # Add remote to push the changes if not already added 
+    $ git remote add origin https://github.com/jai-the-seeker/test.git
+    $ git push -u origin master
+```
 **Fork and Pull**  [https://gist.github.com/Chaser324/ce0505fbed06b947d962](https://gist.github.com/Chaser324/ce0505fbed06b947d962)  
 
 **Rebase vs Merging**   [https://www.atlassian.com/git/tutorials/merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+## Updating `gh-pages`
+```
+$ git pull origin gh-pages 
+$ git rm -r * 
+$ git commit -m "removed extra files" 
+$ git push -u origin gh-pages 
+```
