@@ -25,8 +25,18 @@
 
 ## Updating `gh-pages`
 ```
-$ git pull origin gh-pages 
+# make a new directory and cd into the new directory
+$ git clone https://github.com/jai-the-seeker/test.git .
+
+$ git branch
+* gh-pages
+
+# Alternatively you can change into gh-pages branch
+$ git checkout gh-pages
+
+# remove all the files incl directory with -r flag 
 $ git rm -r * 
 $ git commit -m "removed extra files" 
-$ git push -u origin gh-pages 
+$ git push -u origin gh-pages
+
 ```
