@@ -24,10 +24,15 @@
 **Rebase vs Merging**   [https://www.atlassian.com/git/tutorials/merging-vs-rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 
 ## Updating `gh-pages`
+### Clone the remote repo to local
 ```
+$ git clone https://github.com/jai-the-seeker/website.git
+# Alternatively, if you want to clone in to a new directory then,
 # make a new directory and cd into the new directory
-$ git clone https://github.com/jai-the-seeker/test.git .
-
+$ git clone https://github.com/jai-the-seeker/website.git .
+```
+### Remove the files and commit the changes
+```
 $ git branch
 * gh-pages
 
@@ -38,5 +43,11 @@ $ git checkout gh-pages
 $ git rm -r * 
 $ git commit -m "removed extra files" 
 $ git push -u origin gh-pages
-
+```
+### Copy the files and commit the changes
+```
+$ cp -r build/* website/
+$ git add .
+$ git commit -m "updated"
+$ git push -u origin gh-pages
 ```
